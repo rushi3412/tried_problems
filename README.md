@@ -57,3 +57,6 @@ public class twoDArr{
         }
     }
 }
+output:-
+0 row:0 col:0 |0 row:0 col:1 |0 row:0 col:2 |
+0 row:1 col:0 |0 row:1 col:1 |0 row:1 col:2 |
