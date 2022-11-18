@@ -124,3 +124,34 @@ output:-
 4 5 6 7 
 8 9 10 11 
 12 13 14 15
+
+
+/* print an 2D array of output
+1 2 3 
+1 2 3 
+1 2 3 */
+
+import java.util.*;
+public class twoDArr{
+    public static void main(String args[]){
+        int[][] arr = new int[3][3];
+        
+        int row = arr.length;
+        int col = arr[0].length;
+        
+        int count =0;
+        for(int i=0; i<row; i++){
+            for(int j=0; j<col; j++){
+                arr[i][j] = j+1;
+                count++;
+                
+                System.out.print(arr[i][j]+ " ");
+            }
+            System.out.println();
+        }
+    }
+}
+output:-
+1 2 3 
+1 2 3 
+1 2 3
