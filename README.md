@@ -88,3 +88,39 @@ public class twoDArr{
 output:-
 1 1 1 
 1 1 1
+
+
+
+/* print an 2D array of output 
+0 1 2 3 
+4 5 6 7 
+8 9 10 11 
+12 13 14 15
+*/
+
+
+import java.util.*;
+public class twoDArr{
+    public static void main(String args[]){
+        int[][] arr = new int[4][4];
+        
+        int row = arr.length;
+        int col = arr[0].length;
+        
+        int count =0;
+        for(int i=0; i<row; i++){
+            for(int j=0; j<col; j++){
+                arr[i][j] = count;
+                count++;
+                
+                System.out.print(arr[i][j]+ " ");
+            }
+            System.out.println();
+        }
+    }
+}
+output:-
+0 1 2 3 
+4 5 6 7 
+8 9 10 11 
+12 13 14 15
