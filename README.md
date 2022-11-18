@@ -60,3 +60,31 @@ public class twoDArr{
 output:-
 0 row:0 col:0 |0 row:0 col:1 |0 row:0 col:2 |
 0 row:1 col:0 |0 row:1 col:1 |0 row:1 col:2 |
+
+
+
+
+/* print an 2D array of output 1 1 1 
+                               1 1 1 */
+
+import java.util.*;
+public class twoDArr{
+    public static void main(String args[]){
+        int[][] arr = new int[2][3];
+        
+        int row = arr.length;
+        int col = arr[0].length;
+        
+        for(int i=0; i<row; i++){
+            for(int j=0; j<col; j++){
+                arr[i][j] = 1;
+                
+                System.out.print(arr[i][j]+ " ");
+            }
+            System.out.println();
+        }
+    }
+}
+output:-
+1 1 1 
+1 1 1
