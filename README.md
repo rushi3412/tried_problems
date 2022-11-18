@@ -32,3 +32,28 @@ arr[1] = line2Arrint;
 int ans = arr[0][0]*a[1][1] - arr[1][0]*arr[0][1];
 
 System.out.print(ans);
+
+
+
+
+// printing the elements from an 2D array 
+
+import java.util.*;
+public class twoDArr{
+    public static void main(String args[]){
+        
+        int[][] arr = new int[2][3];
+        
+        int rowLength = arr.length;
+        int colLength = arr[0].length;
+        
+        for(int row=0; row< rowLength; row++){
+            for(int col= 0; col<colLength; col++){
+               int value =  arr[row][col];
+               
+               System.out.print(value + " " + "row:" + row + " " + "col:" + col + " " + "|");
+            }
+            System.out.println();
+        }
+    }
+}
