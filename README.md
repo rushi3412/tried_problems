@@ -186,3 +186,37 @@ output:-
 1 1 1 
 2 2 2 
 3 3 3
+
+
+
+/* print an 2D array of output
+1 4 7 
+2 5 8 
+3 6 9
+
+import java.util.*;
+public class Arr{
+    public static void main(String args[]){
+        int[][] arr = new int[3][3];
+        
+        int count=1;
+        for(int col = 0; col<arr[0].length; col++){
+            for(int row=0; row<arr.length; row++){
+                arr[row][col] = count;
+                count++;
+                
+            }
+            
+        }
+        for(int row=0; row<arr.length; row++){
+            for(int col=0; col<arr[0].length; col++){
+                System.out.print(arr[row][col]+ " ");
+            }
+            System.out.println();
+        }
+    }
+}
+output:-
+1 4 7 
+2 5 8 
+3 6 9
