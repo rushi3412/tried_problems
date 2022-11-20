@@ -254,3 +254,48 @@ output:-
 147
 258
 369 
+
+
+
+
+// simple transpose og matrix 
+3
+1 4 5
+4 5 6
+5 3 1
+
+
+import java.util.*;
+public class Arr{
+public static void main(String args[]){
+Scanner tra = new Scanner(System.in);
+int N = tra.nextInt();
+
+int[][] arr = new int[N][N];
+
+for(int i=0; i<N; i++){
+for(int j=0; j<N; j++){
+arr[][] = new int[i][j];
+}
+}
+for(int i=0; i<N; i++){
+for(int j=0; j<N; j++){
+int storage = arr[i][j];
+arr[i][j] = arr[j][i];
+arr[j][i] = storage;
+}
+}
+for(int i=0; i<N; i++){
+for(int j=0; j<N; j++){
+System.out.print(arr[i][j]);
+}
+System.out.println();
+}
+}
+}
+
+output:-
+3
+1 4 5
+4 5 6
+8 4 2
