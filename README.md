@@ -258,12 +258,12 @@ output:-
 
 
 
-// simple transpose og matrix 
+/* simple transpose og matrix 
 3
 1 4 5
 4 5 6
 5 3 1
-
+*/
 
 import java.util.*;
 public class Arr{
@@ -302,9 +302,9 @@ output:-
 
 
 
-//Given a matrix of size M*N, your task is to find the maximum sum of a column.
+/*Given a matrix of size M*N, your task is to find the maximum sum of a column.
 Input
-
+*/
 import java.util.*;
 public class arrT{
     public static void main(String args[]){
@@ -353,9 +353,9 @@ Sample Output:-
 
 
 
-//Given a boolean matrix of size N*M in which each row is sorted your task is to print the index of the row containing maximum 1's. If multiple answer exist print the smallest one.
+/*Given a boolean matrix of size N*M in which each row is sorted your task is to print the index of the row containing maximum 1's. If multiple answer exist print the smallest one.
 Input
-
+*/
 
 
 import java.util.*;
@@ -403,3 +403,76 @@ Sample Input:-
 
 Sample Output:-
 0
+
+
+
+
+/*  Given a matrix of size N*N, your task is to find the sum of the upper triangular matrix and the lower triangular matrix.
+
+For Matrix:-
+M00 M01 M02
+M10 M11 M12
+M20 M21 M22
+
+Upper Triangular:-
+M00 M01 M02
+_____M11 M12
+__________M22
+
+Lower Triangular:-
+M00__________
+M10 M11_____
+M20 M21 M22
+
+*/
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        Scanner mat = new Scanner(System.in);
+
+        int N = mat.nextInt();
+
+        int[][] arr = new int[N][N];
+
+        for(int i=0; i<N; i++){
+            for(int j=0; j<N; j++){
+                arr[i][j] = mat.nextInt();
+            }
+        }
+        TrianglarMatrix(arr);
+
+    }
+    public static void TrianglarMatrix(int[][] arr){
+
+        int upperMatrix = 0;
+        int lowerMatrix = 0;
+
+        for(int row =0; row<arr.length; row++){
+            for(int col =0; col < arr[0].length; col++){
+                if(col >= row){
+                    //you are in uppermatrix
+                    upperMatrix += arr[row][col];
+                }
+                if(row >= col){
+                    // you are in lowerMatrix
+                    lowerMatrix += arr[row][col];
+                }
+            }
+        }
+        System.out.print(upperMatrix + " " + lowerMatrix);
+    }
+}
+
+Sample Input:-
+3
+1 4 2
+1 5 7
+3 8 1
+
+Sample Output:-
+20 19
