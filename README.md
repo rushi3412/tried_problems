@@ -349,3 +349,57 @@ Sample Input:-
 
 Sample Output:-
 18
+
+
+
+
+//Given a boolean matrix of size N*M in which each row is sorted your task is to print the index of the row containing maximum 1's. If multiple answer exist print the smallest one.
+Input
+
+
+
+import java.util.*;
+public class arr{
+    public static void main(String args[]){
+        Scanner mat = new Scanner(System.in);
+        int N = mat.nextInt();
+        int M = mat.nextInt();
+        
+        int[][] arr = new int[N][M];
+        
+        for(int i =0; i<arr.length; i++){
+            for(int j=0; j<arr[0].length; j++){
+                arr[i][j] = mat.nextInt();
+            }
+        }
+        int value = winnerIndexs(arr);
+        System.out.print(value);
+    }
+    
+    public static int winnerIndexs(int[][] arr){
+        int sum =0; 
+        int winnerIndex = 0;
+        for(int i=0; i<arr.length; i++){
+            int rowSum =0;
+            for(int j=0; j<arr[0].length; j++){
+                if(arr[i][j] == 1){
+                    rowSum += arr[i][j];
+                }
+                if(rowSum > sum){
+                    sum = rowSum;
+                    winnerIndex = i;
+                }
+            }
+        }
+        return winnerIndex;
+    }
+}
+
+Sample Input:-
+3 5
+0 1 1 1 1
+0 0 0 1 1
+0 0 0 1 1
+
+Sample Output:-
+0
