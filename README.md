@@ -299,3 +299,53 @@ output:-
 1 4 5
 4 5 6
 8 4 2
+
+
+
+//Given a matrix of size M*N, your task is to find the maximum sum of a column.
+Input
+
+import java.util.*;
+public class arrT{
+    public static void main(String args[]){
+        Scanner sum = new Scanner(System.in);
+        int N = sum.nextInt();
+        int M = sum.nextInt();
+        
+        int[][] arr = new int[N][M];
+        
+        for(int i=0; i<arr.length; i++){
+            for(int j=0; j<arr[0].length; j++){
+                arr[i][j] = sum.nextInt();
+                
+            }
+        }
+        int maxSum = maxColSum(arr);
+        System.out.print(maxSum);
+        
+    }
+    public static int maxColSum(int[][] arr){
+        int maxSum = Integer.MIN_VALUE;
+        
+        for(int col=0; col<arr[0].length; col++){
+            int colSum = 0;
+            for(int row=0; row<arr.length; row++){
+                colSum += arr[row][col];
+            }
+            if(colSum > maxSum){
+                maxSum = colSum;
+            }
+            maxSum = (colSum > maxSum) ? colSum : maxSum;
+        }
+        return maxSum;
+    }
+}
+
+Sample Input:-
+3 3
+1 2 3
+4 5 6
+7 8 9
+
+Sample Output:-
+18
