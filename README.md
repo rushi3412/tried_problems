@@ -476,3 +476,29 @@ Sample Input:-
 
 Sample Output:-
 20 19
+
+
+
+// print the diagonal 
+1 2 3 
+4 5 6
+7 8 9 
+output 5
+
+import java.util.*;
+public class Arr{
+    public static void main(String args[]){
+        Scanner mat = new Scanner(System.in);
+        int N = mat.nextInt();
+        int M = mat.nextInt();
+        
+        int[][] arr = new int[N][M];
+        int row = arr.length;
+        int col = arr[0].length;
+        
+                int ans = row + col - 1;
+                System.out.print(ans);
+            }
+        }
+    
+ 
