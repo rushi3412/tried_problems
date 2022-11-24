@@ -502,3 +502,63 @@ public class Arr{
         }
     
  
+ /* Problem Statement
+Given a matrix of size N*N, your task is to find the sum of the primary and secondary diagonal of the matrix.
+
+For Matrix:-
+M00 M01 M02
+M10 M11 M12
+M20 M21 M22
+
+Primary diagonal:- M00 M11 M22
+Secondary diagonal:- M02 M11 M20 */
+
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static int DiagonalSum(int[][]Matrix, int N){
+        int diagonal1 = 0;
+        
+        for(int i=0; i<N; i++){
+            for(int j=0; j<N; j++){
+                if(j==i){
+                    diagonal1 += Matrix[i][j];
+                }
+            }
+        }
+          int diagonal2 = 0;
+        for(int i=0; i<N; i++){
+            for(int j=N-1; j>=0; j--){
+                
+                if(j + i == N-1)
+                diagonal2 += Matrix[i][j];
+            }
+        }
+    System.out.print(diagonal1 + " " + diagonal2);
+    return 0;
+    }
+
+       public static void main(String[] args){
+              Scanner Mat = new Scanner(System.in);
+              int N = Mat.nextInt();
+              int[][] Matrix = new int[N][N];
+              for(int i = 0; i < N; i++){
+                  for(int j = 0; j < N; j++){
+                      Matrix[i][j] = Mat.nextInt();
+          }
+      }
+            DiagonalSum(Matrix,N);
+   }
+}
+
+Sample Input:-
+2
+1 4
+2 6
+
+Sample Output:-
+7 6
