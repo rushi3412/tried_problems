@@ -562,3 +562,33 @@ Sample Input:-
 
 Sample Output:-
 7 6
+
+
+
+
+// Java program to print vowels in a String
+
+
+import java.util.*;
+public class strr{
+    public static void main(String args[]){
+        Scanner vol = new Scanner(System.in);
+        String str = vol.nextLine();
+        
+        for(int i=0; i<str.length(); i++){
+            char ch = str.charAt(i);
+            
+            if(isVowels(ch)){
+                System.out.print(ch + " ");
+            }
+        }
+    }
+    
+    public static boolean isVowels(char c){
+        if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ){
+            return true;
+        }else {
+            return false;
+        }
+    }
+}
