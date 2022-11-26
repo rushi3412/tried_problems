@@ -592,3 +592,34 @@ public class strr{
         }
     }
 }
+
+
+
+/*
+        Reverse the string
+        Input=: america
+        output=: acirem
+ */
+ 
+ import java.util.*;
+public class strin{
+    public static void main(String args[]){
+        Scanner name = new Scanner(System.in);
+       String str = name.nextLine();
+     //  String str = "america";
+       String ansString = "";
+       for(int i=str.length() -1; i>0; i--){
+           char ch = str.charAt(i);
+           ansString += ch;
+            System.out.println(ansString);
+       }
+       System.out.println(ansString);
+
+    }
+}
+ Input=: america
+        output=: acirem
+        
+        
+
+
