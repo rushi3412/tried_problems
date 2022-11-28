@@ -662,3 +662,72 @@ aci
 acir
 acire
 acirem
+
+
+
+
+Given a matrix of size N*N, your task is to find the sum of the upper triangular matrix and the lower triangular matrix.
+
+For Matrix:-
+M00 M01 M02
+M10 M11 M12
+M20 M21 M22
+
+Upper Triangular:-
+M00 M01 M02
+_____M11 M12
+__________M22
+
+Lower Triangular:-
+M00__________
+M10 M11_____
+M20 M21 M22
+
+
+import java.util.*;
+public class arrTwoD {
+    public static void main(String args[]) {
+    
+    Scanner mat = new Scanner(System.in);
+    int N = mat.nextInt();
+    
+    int[][] arr = new int[N][N];
+    
+    for(int i=0; i<N; i++){
+        for(int j=0; j<N; j++){
+            arr[i][j] = mat.nextInt();
+        }
+    }
+    TriangularMatrix(arr);
+    
+    
+}
+ public static void TriangularMatrix(int[][] arr){
+     int upperMatrix = 0;
+     int lowerMatrix = 0;
+     
+     for(int row =0; row<arr.length; row++) {
+         for(int col =0; col<arr[0].length; col++){
+            if(col >= row){
+                // upperMatrix 
+                upperMatrix += arr[row][col];
+                
+            }
+            if(row >= col){
+                //lowerMatrix
+                lowerMatrix += arr[row][col];
+            }
+         }
+     }
+     System.out.print(upperMatrix + " " + lowerMatrix);
+    }
+ }
+ 
+Sample Input:-
+3
+1 4 2
+1 5 7
+3 8 1
+
+Sample Output:-
+20 19
