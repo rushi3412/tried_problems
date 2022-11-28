@@ -787,3 +787,38 @@ Sample Input:-
 
 Sample Output:-
 0
+
+
+
+
+/* You are given a string your task is to reverse the given string. */
+
+
+import java.util.*;
+public class arrToD{
+    public static void main(String args[]){
+        Scanner mat = new Scanner(System.in);
+            String s = mat.next();
+            
+            String ans = reversString(s);
+            System.out.print(ans);
+    }
+    
+    public static String reversString(String str){
+        StringBuilder ansStr = new StringBuilder();
+        
+        for(int i=str.length()-1; i>=0; i--){
+            char ch = str.charAt(i);
+            ansStr.append(ch);
+            
+        }
+    
+    return ansStr.toString();
+    }
+}
+
+Sample Input
+abc
+
+Sample Output
+cba
