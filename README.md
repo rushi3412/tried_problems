@@ -666,7 +666,7 @@ acirem
 
 
 
-Given a matrix of size N*N, your task is to find the sum of the upper triangular matrix and the lower triangular matrix.
+/* Given a matrix of size N*N, your task is to find the sum of the upper triangular matrix and the lower triangular matrix.
 
 For Matrix:-
 M00 M01 M02
@@ -682,6 +682,7 @@ Lower Triangular:-
 M00__________
 M10 M11_____
 M20 M21 M22
+*/
 
 
 import java.util.*;
@@ -731,3 +732,58 @@ Sample Input:-
 
 Sample Output:-
 20 19
+
+
+
+
+/* Given a boolean matrix of size N*M in which each row is sorted your task is to print the index of the row containing maximum 1's. If multiple answer exist print the smallest one.
+*/
+
+import java.util.*;
+public class arrTwoD{
+    public static void main(String args[]){
+        Scanner mat = new Scanner(System.in);
+            int N = mat.nextInt();
+            int M = mat.nextInt();
+            
+            int[][] arr = new int[N][M];
+            
+            for(int i=0; i<N; i++){
+                for(int j=0; j<M; j++){
+                    arr[i][j] = mat.nextInt();
+                }
+            }
+        int ans = maxOnces(arr);
+        System.out.print(ans);
+    }
+    
+    public static int maxOnces(int[][] arr){
+        int sum = 0;
+        int winnerIndex = 0;
+        
+        for(int i=0; i< arr.length; i++){
+            int rowSum = 0;
+            for(int j=0; j< arr[0].length; j++){
+                if(arr[i][j] == 1){
+                    rowSum += arr[i][j];
+                    
+                }
+                if(rowSum > sum){
+                    sum = rowSum;
+                    winnerIndex = i;
+                }
+            }
+        }
+        
+        return winnerIndex;
+    }
+}
+
+Sample Input:-
+3 5
+0 1 1 1 1
+0 0 0 1 1
+0 0 0 1 1
+
+Sample Output:-
+0
