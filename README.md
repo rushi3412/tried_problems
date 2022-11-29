@@ -890,3 +890,43 @@ Sample Input:
 
 Sample Output:
 1
+
+
+/* There is a robot starting at the position (0, 0), the origin, on a 2D plane. Given a sequence of its moves, judge if this robot ends up at (0, 0) after it completes its moves.
+
+You are given a string moves that represents the move sequence of the robot where moves[i] represents its ith move. Valid moves are 'R' (right), 'L' (left), 'U' (up), and 'D' (down).
+
+Return true if the robot returns to the origin after it finishes all of its moves, or false otherwise.
+
+Note: The way that the robot is "facing" is irrelevant. 'R' will always make the robot move to the right once, 'L' will always make it move left, etc. Also, assume that the magnitude of the robot's movement is the same for each move.  */
+dificulty level = **meadium**
+
+import java.util.*;
+public class strk{
+    public static void main(String args[]){
+        Scanner robot = new Scanner(System.in);
+        String directions = robot.next();
+        
+        int x = 0;
+        int y = 0;
+        for(int i=0; i<directions.length(); i++){
+            char dire = directions.charAt(i);
+            if(dire == 'U'){
+                y++;
+            }else if(dire == 'D'){
+                y--;
+            }else if(dire == 'R'){
+                x++;
+            }else if(dire == 'L'){
+                x--;
+            }
+        }
+        System.out.print(x == 0 && y == 0 ? "True" : "False");
+    }
+}
+
+Sample Input:
+UD
+
+Sample Output:
+True
