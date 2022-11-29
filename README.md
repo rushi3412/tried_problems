@@ -863,3 +863,30 @@ Sample Input:
 
 Sample Output:
 11011
+
+
+
+/* Given an n-digit large number in form of string, check whether it is divisible by 7 or not. Print 1 if divisible by 7, otherwise 0
+        */
+import java.util.*;
+public class strj{
+    public static void main(String args[]){
+        Scanner divi  = new Scanner(System.in);
+        String n = divi.next();
+        
+        int rem = 0;
+        for(int i=0; i<n.length(); i++){
+            int num = n.charAt(i);
+            int d = rem * 10 + num;
+            rem = d % 7;
+        }
+        
+        System.out.print(rem == 0 ? '1' : '0');
+    }
+}
+
+Sample Input:
+8955795758
+
+Sample Output:
+1
