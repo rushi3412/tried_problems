@@ -822,3 +822,44 @@ abc
 
 Sample Output
 cba
+
+
+
+
+
+/* You are given two binary strings of length N. You have to output a resultant string. The resultant string will be calculated in the following way:
+
+- > For every position i, if the ith character of the first string is '1' and the second string is '0', the resultant string will have '1'. Also, for every position i, if the ith character of the first string is '0' and the second string is '1', the resultant string will have '1'. Rest, all the characters of the resultant string will be '0'. Find the resultant string;
+
+*/
+
+
+import java.util.*;
+public class strj{
+    public static void main(String arg[]){
+        Scanner stre = new Scanner(System.in);
+        int n = stre.nextInt();
+        
+        String firstStr = stre.next();
+        String secondStr = stre.next();
+        
+        for(int i=0; i<n; i++){
+            char ch1 = firstStr.charAt(i);
+            char ch2 = secondStr.charAt(i);
+            
+            boolean b1 = ch1 == '0';
+            boolean b2 = ch2 == '0';
+            
+            System.out.print(b1 ^ b2 ? '1' : '0');
+        }
+    }
+}
+
+
+Sample Input:
+5
+10110
+01101
+
+Sample Output:
+11011
