@@ -999,3 +999,44 @@ public class proPra{
 input: 5 12 45 78 90 1
 output: 226                                  
                                    
+
+
+
+/* pascal triagle give last line of it */
+
+
+
+import java.util.*;
+public class pascaArr{
+    public static void main(String args[]){
+        Scanner tri = new Scanner(System.in);
+        int n = tri.nextInt();
+        int[] arr = pasclTriangle(n);
+        for(int item : arr){
+            System.out.print(item + " ");
+        }
+    }
+
+public static int[] pasclTriangle(int n){
+   n = n-1;
+    if(n<0){
+        return new int[0];
+    }
+    int[] prevArr = new int[1];
+    prevArr[0] = 1; 
+    while(n != 0){
+        int[] nextRowArray = new int[prevArr.length + 1];
+        nextRowArray[0] = 1;
+        nextRowArray[nextRowArray.length -1] = 1;
+        for(int i=1; i<prevArr.length; i++){
+            nextRowArray[i] = prevArr[i] + prevArr[i-1];  
+        }
+        prevArr = nextRowArray;
+        n--;
+    }
+    return prevArr;
+}
+}
+
+input: 4
+output: 1 3 3 1
