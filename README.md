@@ -930,3 +930,39 @@ UD
 
 Sample Output:
 True
+
+
+
+/* sum of all elements using arraylist */
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class practicePro{
+    public static void main(String args[]){
+        ArrayList<Integer> all = new ArrayList<>();
+        
+        Scanner li = new Scanner(System.in);
+        int n = li.nextInt();
+        
+        for(int i=0; i<n; i++){
+            all.add(li.nextInt());
+        }
+        
+        int ans = sumOfElements(all);
+        System.out.print(ans);
+    }
+    
+    public static int sumOfElements(ArrayList<Integer> all){
+        int sum = 0;
+        for(int i=0; i<all.size(); i++){
+            sum += all.get(i);
+        }
+        
+        return sum;
+    }
+}
+
+input: 5 12 45 78 90 1
+output: 226
