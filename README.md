@@ -1039,4 +1039,9 @@ public static int[] pasclTriangle(int n){
 }
 
 input: 4
-output: 1 3 3 1
+output: [1,3,3,1]
+            Explanation: what is a pascal triangle ....
+                       1
+                      1 1
+                     1 2 1
+                    1 3 3 1
