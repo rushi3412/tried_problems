@@ -966,3 +966,36 @@ public class practicePro{
 
 input: 5 12 45 78 90 1
 output: 226
+                                   
+                                   
+                                   
+  /* sum of all elements using arraylist(with different varible name in funcions */                                                                    
+                                   
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class proPra{
+    public static void main(String args[]){
+        ArrayList<Integer> nu = new ArrayList<>();
+        
+        Scanner el = new Scanner(System.in);
+        int n = el.nextInt();
+        for(int i=0; i<n; i++){
+            nu.add(el.nextInt());
+        }
+        int ans = sumOfEl(nu);
+        System.out.print(ans);
+    }
+    
+    public static int sumOfEl(ArrayList<Integer> al){
+        int sum =0; 
+        for(int i=0;i<al.size(); i++){
+            sum += al.get(i);
+        }
+        return sum;
+    }
+}                                   
+input: 5 12 45 78 90 1
+output: 226                                  
+                                   
