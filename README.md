@@ -1073,15 +1073,51 @@ public class arrLit{
 // for(int i=1; i<al.size(); i++){   
         sum += al.get(i);
       }
-      return sum;
+      return sum; 
     }
  }
- input : 5 7 8 6 7 5
- output(with 0 in for loop): 33
- output(with 1 in for loop): 26
- 
-      
-        
-        
-        
+
+
+
+*/ pascal Triangle print the row given by the user  (2nd time i did only this time i did it on my own) */
+
+import java.util.*;
+public class pastR{
+    public static void main(String args[]){
+    
+        Scanner tri = new Scanner(System.in);
+    
+        int n = tri.nextInt();
+        int[] arr = pascalTriangle(n);
+        for(int item: arr){
+         System.out.print(item);
+         }
+    }
+        public static int[] pascalTriangle(int n){
+                  n = n-1;
+              if(n<0){
+                  return new int[0];
+      }
+                  int[] prevArr = new int[1];
+                              prevArr[0] = 1;
+                  while(n != 0){
+              int[] nextRowArr = new int[prevArr.length +1];
+                     nextRowArr[0] = 1;
+                      nextRowArr[nextRowArr.length - 1] = 1;
+               for(int i=1; i<prevArr.length; i++){
+          nextRowArr[i] = prevArr[i] + prevArr[i-1];
+      }
+            prevArr = nextRowArr;
+            n--;
+    }
+          return prevArr;
    }
+}
+input: 4
+output: [1,3,3,1]
+            Explanation: what is a pascal triangle ....
+                       1
+                      1 1
+                     1 2 1
+                    1 3 3 1  
+    
