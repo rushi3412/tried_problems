@@ -1155,3 +1155,35 @@ Sample Input:
 
 Sample Output:
 1 2 3 4 5
+
+
+/* Given an ArrayList of N lowercase characters. The task is to insert given elements in the list and count frequency of elements present in the list.
+
+You can use some inbuilt functions as:-
+add() to append element in the list
+contains() to check an element is present or not in the list
+collections.frequency() to find the frequency of the element in the list.
+*/
+
+public static void insert(ArrayList<Character> clist, char c){
+    clist.add(c);
+}
+public static void freq(ArrayList<Character> clist, char c){
+    if(clist.contains(c)){
+        int countHowMany = Collections.frequency(clist, c);
+        System.out.print(countHowMany);
+    }else {
+        System.out.print("Not Present");
+    }
+    
+}
+Sample Input:
+2
+6
+i n i e i w i t i n f n
+4
+i c i p i p f f
+
+Sample Output:
+2
+Not Present
