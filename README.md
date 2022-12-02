@@ -1045,3 +1045,43 @@ output: [1,3,3,1]
                       1 1
                      1 2 1
                     1 3 3 1
+
+
+/* sum of Arraylist elements given by the user (2nd time i did only this time i did it on my own)  */
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class arrLit{
+    public static void main(String args[]){
+    
+    ArrayList<Integer> al = new ArrayList<>();
+    Scanner num = new Scanner(System.in);
+    int n = num.nextInt();
+    
+    for(int i=0; i<n; i++){
+        al.add(num.nextInt());
+     }
+     int ans = sumOfArrayList(al);
+        System.out.print(ans);
+   }
+   public static int sumOfArrayList(ArrayList<Integer> al){
+   int sum = 0;
+   for(int i=0; i<al.size(); i++){
+// for(int i=1; i<al.size(); i++){   
+        sum += al.get(i);
+      }
+      return sum;
+    }
+ }
+ input : 5 7 8 6 7 5
+ output(with 0 in for loop): 33
+ output(with 1 in for loop): 26
+ 
+      
+        
+        
+        
+   }
