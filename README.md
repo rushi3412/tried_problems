@@ -1187,3 +1187,49 @@ i c i p i p f f
 Sample Output:
 2
 Not Present
+
+
+
+/* Classes at NITAP is finally starting after the summer break and students have to reach the campus to avoid the late fine of Rs 500 for semester registration. Mohan, Shreya and Anuj live in the same town. They are deciding on a date to book their train ticket. Everyone has a demand each.
+• Mohan wants the ticket at least on date A.
+• Shreya wants the ticket at most by date B.
+• Anuj wants the ticket atleast on date C.
+Find if there is a date where all of them can take the ticket.
+*/
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        // Your code here
+        Scanner tic = new Scanner(System.in);
+            int t = tic.nextInt();
+            
+            for(int i=0; i<t; i++){
+                int A = tic.nextInt();
+                int B = tic.nextInt();
+                int C = tic.nextInt();
+
+                if(B >= A && B >= C) {
+                    System.out.println("YES");
+                }else {
+                    System.out.println("NO");
+                }
+            }
+        }
+    }
+    
+Sample Input
+4
+13 16 12
+14 15 16
+13 16 16
+15 13 17
+Sample Output
+YES
+NO
+YES
+NO
