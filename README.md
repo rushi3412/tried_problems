@@ -1121,3 +1121,37 @@ output: [1,3,3,1]
                      1 2 1
                     1 3 3 1  
     
+
+/* Array List In Java
+
+There are n integers are given.
+
+Create an ArrayList
+
+Add elements
+
+Print the elements of arraylist.
+*/
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class arrList{
+    public static void main(String args[]){
+        Scanner imp = new Scanner(System.in);
+        int n = imp.nextInt();
+        ArrayList<Integer> list = new ArrayList<>();
+            for(int i=0; i<n; i++){
+            list.add(imp.nextInt());
+            }
+            for(int i=0; i<list.size(); i++){
+            System.out.print(list.get(i)+ " ");
+            }
+    }
+}
+Sample Input:
+5
+1 2 3 4 5
+
+Sample Output:
+1 2 3 4 5
