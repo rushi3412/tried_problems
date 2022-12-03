@@ -1233,3 +1233,43 @@ YES
 NO
 YES
 NO
+
+
+/* Given an array A of N integers, find whether there exists three consecutive same integers in the array.
+*/
+
+
+import java.util.*;
+
+public class Main{
+    public static void main(String args[]){
+    
+    Scanner lin = new Scanner(System.in);
+    int n = lin.nextInt();
+    int[] arr = new int[n];
+    
+    for(int i=0; i<n; i++){
+        arr[i] = lin.nextInt();
+        }
+        boolean = false;
+        for(int i=0; i<n-2; i++){
+            if(arr[i]==arr[i+1] && arr[i]==arr[i+2]){
+                ans = true;
+                break;
+            }
+        }
+        if(ans == true){
+            System.out.print("Yes");
+        }else{
+            System.out.print("No");
+      }
+    }
+}
+Sample Input
+5
+1 2 2 2 4
+
+Sample Output
+Yes
+
+Explanation: The segment [2, 2, 2] follows the criterion.
