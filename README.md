@@ -1282,14 +1282,13 @@ Explanation: The segment [2, 2, 2] follows the criterion.
 The warden told him that those students whose roll no are divisible by 2 they will get PAPUM HOSTEL and if it odd then they will get LOHIT HOSTEL. If the student is girl, then she will get ‘Upper Wing’ otherwise ‘Lower Wing’.
     */
     
-    import java.io.*; // for handling input/output
-import java.util.*; // contains Collections framework
 
-// don't change the name of this class
-// you can add inner classes if needed
-class Main {
+import java.util.*;
+
+
+public class Main {
     public static void main (String[] args) {
-        // Your code here
+    
         Scanner hostel = new Scanner(System.in);
         int t = hostel.nextInt();
         for(int i=0; i<t; i++){
@@ -1321,3 +1320,54 @@ PAPUM L
 LOHIT U
 Explanation
 Here 30 is evenly divisible by two and B is the boy so he gets the Papum Hostel and allocated the room at lower wing.
+
+                          
+                          
+    /* coount the freqency of a element if it is greter than equal to 3 then print Yes else print No.   */                   
+                          
+                          
+import java.util.*; 
+                          
+public class Main {
+    public static void main (String[] args) {    
+                          
+        Scanner con = new Scanner(System.in);
+        int N = con.nextInt();
+        int[] arr = new int[N];
+
+        for(int i=0; i<N; i++){
+            arr[i] = con.nextInt();
+        }
+
+        int total = 1;
+        int repeted = 0;
+        for(int i=0; i<arr.length; i++){
+            for(int j=i; j<arr.length; j++){
+            if(arr[j] == arr[i]){
+                repeted = arr[i];
+                total++;
+            }
+        }        
+     }
+     if(total > 3){
+            System.out.print("YES");
+        }else {
+            System.out.print("NO");
+        }
+    }     
+}                         
+Sample Input
+5
+1 2 2 2 4
+
+Sample Output
+Yes 
+    
+Sample Input
+5
+2 1 5 2 2
+
+Sample Output
+Yes     
+
+         
