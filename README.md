@@ -1273,3 +1273,51 @@ Sample Output
 Yes
 
 Explanation: The segment [2, 2, 2] follows the criterion.
+
+   
+    
+    
+    
+    /*Mohan was so excited to visit his college NIT Arunachal Pradesh campus after COVID along with his friends Shreya and Anuj. The Warden allocated the hostel room for him but he was curious to know about the fact that how students are getting rooms.
+The warden told him that those students whose roll no are divisible by 2 they will get PAPUM HOSTEL and if it odd then they will get LOHIT HOSTEL. If the student is girl, then she will get ‘Upper Wing’ otherwise ‘Lower Wing’.
+    */
+    
+    import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        // Your code here
+        Scanner hostel = new Scanner(System.in);
+        int t = hostel.nextInt();
+        for(int i=0; i<t; i++){
+            int R = hostel.nextInt();
+            char S = hostel.next().charAt(0);
+        if(R % 2 == 0){
+            if(S == 'G'){
+                System.out.println("PAPUM U");
+            }else {
+                System.out.println("PAPUM L");
+            }
+        }
+            if(R % 2 != 0){
+                if(S == 'G'){
+                    System.out.println("LOHIT U");
+                }else {
+                    System.out.println("LOHIT L");
+            }
+          }  
+        }
+    }
+}
+Sample Input
+2
+30 B
+35 G
+Sample Output
+PAPUM L
+LOHIT U
+Explanation
+Here 30 is evenly divisible by two and B is the boy so he gets the Papum Hostel and allocated the room at lower wing.
