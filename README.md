@@ -1400,3 +1400,27 @@ Sample Input:-
 
 Sample Output:-
 -1
+
+
+/* N people are standing in a queue in which A of them like apple and B of them like oranges. How many people like both apple and oranges.
+
+Note:- It is guaranteed that each and every person likes at least one of the given two.
+*/
+
+static int LikesBoth(int N, int A, int B){
+  int ans = A + B - N;
+
+      return ans;
+    }
+    
+Sample Input:-
+5 3 4
+
+Sample Output:-
+2
+
+Sample Input:-
+5 5 5
+
+Sample Output:-
+5
