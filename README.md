@@ -1371,3 +1371,32 @@ Sample Output
 Yes     
 
          
+/* Sara's Phone has N apps and each app takes K unit of memory. Now Sara wants to release M units of memory. Your task is to tell the minimum apps Sara needs to delete or say it is not possible.
+*/
+
+static int Phone(int N, int K, int M){
+  int totalSpaceTakenByApps = N*K;
+
+int spaceWeNeed;
+
+if(M <= totalSpaceTakenByApps){
+    spaceWeNeed = M/K;
+    
+    int remainingSpace = M%K;
+    int appsWeNeedToDelete = spaceWeNeed + reamainingSpace;
+    return appsWeNeedToDelete;
+}
+return -1;
+}
+
+Sample Input:-
+10 3 10
+
+Sample Output:-
+4
+
+Sample Input:-
+10 3 40
+
+Sample Output:-
+-1
