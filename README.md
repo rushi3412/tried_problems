@@ -1448,7 +1448,7 @@ public class pra{
     if(n == 0){
         return 0;
     }
-    
+   // work + faith
     int faith = sumRecursion(n-1);
     int sum = n + faith;
     return sum;
@@ -1456,3 +1456,36 @@ public class pra{
  }
  input : 4 
  output: 10
+
+                              
+                              
+                              
+       /* to print N to 1 in decreasing order
+             input 5
+             output 5 4 3 2 1
+                             
+       */                       
+                              
+ import java.util.*;
+  public class prac1Recur{
+     public static void main(String args[]{
+        Scanner sn = new Scanner(System.in);
+          int n = sn.nextInt();
+          decresinRecur(n);
+          
+      }
+      public static void decresinRecur{
+         // base case
+     if(n == 0){
+       return;
+     }
+        //work
+     System.out.print(n+ " ");
+                              
+    //faith   
+     decreasinRecur(n -1);
+      return;
+     }
+  }
+   input 5
+   output 5 4 3 2 1
