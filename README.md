@@ -1489,3 +1489,30 @@ public class pra{
   }
    input 5
    output 5 4 3 2 1
+
+
+/* to print 1 to N in incresing order 
+input 4 
+output 1 2 3 4 
+
+
+import java.util.*;
+public class praRe{
+    public static void main(String args[]){
+        Scanner sn = new Scanner(System.in);
+        int n = sn.nextInt();
+        increseRec(n);
+  }
+    public static void increseRec(int n){
+    //base case
+    if (n == 0){
+        return;
+        }
+         // work
+    increseRec(n - 1);
+        // faith
+    System.out.print(n+ " ");
+    }  
+}
+input 4 
+output 1 2 3 4
