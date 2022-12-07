@@ -1424,3 +1424,35 @@ Sample Input:-
 
 Sample Output:-
 5
+
+
+
+/* get the sum of first n digits 
+    input 4 
+    output 10
+ */
+
+
+import java.util.*;
+public class pra{
+    public static void main(String args[]){
+    
+    Scanner sn = new Scanner(System.in);
+    int n = sn.nextInt();
+    int ansRecursion = sumRecursion(n);
+    System.out.print(ansRecursion);
+   }
+   
+   public static int sumRecursion(int n){
+    //base case
+    if(n == 0){
+        return 0;
+    }
+    
+    int faith = sumRecursion(n-1);
+    int sum = n + faith;
+    return sum;
+    }
+ }
+ input : 4 
+ output: 10
