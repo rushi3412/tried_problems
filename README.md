@@ -1521,23 +1521,22 @@ output 1 2 3 4
 /* Write a recursive program to remove all tabs or spaces from a string. */
 
 import java.util.*;
-public class recur{
+public class recurSpace{
     public static void main(String args[]){
-    Scanner na = new Scanner(System.in);
-    String str = na.nextLine();
-    Stringbuilder str1 = new Stringbuilder();
-    removeSpace(str1, inStr, 0);
-    System.out.print(str1);
+        Scanner space = new Scanner(System.in);
+        String n = space.nextLine();
+        StringBuilder str1 = new StringBuilder();
+        removeSpace(str1, n, 0);
+        System.out.print(str1);
     }
-    public static void removeSpace(Stringbuilder Str1, String instr, int i){
-    if(inStr.length() == i){
-    return;
-    }
-    if(inStr.charAt(i) != ' ' && inStr.charAt(i) != '\t'){
-    str1.append(inStr.charAt(i);
-    }
-    return (str1, inStr, ++i);
-    
+    public static void removeSpace(StringBuilder str1, String inStr, int i){
+        if(inStr.length() == i){
+            return;
+        }
+        if(inStr.charAt(i) != ' ' && inStr.charAt(i) != '\t'){
+            str1.append(inStr.charAt(i));
+        }
+        removeSpace(str1, inStr, ++i);
     }
 }
 Sample Input:
