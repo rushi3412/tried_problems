@@ -1524,7 +1524,7 @@ import java.util.*;
 public class recur{
     public static void main(String args[]){
     Scanner na = new Scanner(System.in);
-    String str = na.nextInt();
+    String str = na.nextLine();
     Stringbuilder str1 = new Stringbuilder();
     removeSpace(str1, inStr, 0);
     System.out.print(str1);
