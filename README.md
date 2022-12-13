@@ -1516,3 +1516,32 @@ public class praRe{
 }
 input 4 
 output 1 2 3 4
+
+
+/* Write a recursive program to remove all tabs or spaces from a string. */
+
+import java.util.*;
+public class recur{
+    public static void main(String args[]){
+    Scanner na = new Scanner(System.in);
+    String str = na.nextInt();
+    Stringbuilder str1 = new Stringbuilder();
+    removeSpace(str1, inStr, 0);
+    System.out.print(str1);
+    }
+    public static void removeSpace(Stringbuilder Str1, String instr, int i){
+    if(inStr.length() == i){
+    return;
+    }
+    if(inStr.charAt(i) != ' ' && inStr.charAt(i) != '\t'){
+    str1.append(inStr.charAt(i);
+    }
+    return (str1, inStr, ++i);
+    
+    }
+}
+Sample Input:
+H e llo Wo r l d
+
+Sample Output:
+HelloWorld
