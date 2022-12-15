@@ -1544,3 +1544,58 @@ H e llo Wo r l d
 
 Sample Output:
 HelloWorld
+
+
+
+/* Given an integer array arr[] of size N and an element X. The task is to find and print the indices of the given element if it is present in array if not then print “Not found” without quotes.
+
+Note: The elements may be present more than once.
+*/
+
+import java.util.*;
+public class findingEle{
+    public static void main(String[] args){
+        Scanner ele = new Scanner(System.in);
+              int T = ele.nextInt();
+    
+         while(T-- != 0){
+              int n = ele.nextInt();
+              int target = ele.nextInt();
+     
+              int[] arr = new int[n];
+                 for(int i=0; i<n; i++){
+                  arr[i] = ele.nextInt();
+            }
+              ArrayList<Integer> ans = findEle(arr, target);
+                     if(ans.size() != 0){
+                         for(int i=0; i<ans.size(); i++){
+                             System.out.print(ans.get(i)+ " ");
+            }
+             System.out.println();
+         }else {
+           System.out.print("Not found");
+       }
+     }
+  }
+  public static ArrayList<Integer> findEle(int[] arr, int target){
+         ArrayList<Integer> list = new ArrayList<>();
+              for(int i=0; i<arr.length; i++){
+             if(arr[i] == target){
+      list.add(i);
+    }
+    
+                  
+     }
+         return list;
+   }
+}
+Input:
+2
+5 6
+2 3 6 5 6
+4 3
+2 4 6 5
+
+Output:
+2 4
+Not found
