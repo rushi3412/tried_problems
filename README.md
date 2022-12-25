@@ -1599,3 +1599,69 @@ Input:
 Output:
 2 4
 Not found
+
+
+
+/*
+Problem Statement
+Summer is at its peak in Australia. Freddy is planning to purchase a water cooler to keep his room cool. He has two options available:
+Rent a cooler at the cost of X coins per month.
+Purchase a cooler for Y coins.
+Given that the summer season will last for M months in Australia, Help Freddy in deciding wether he should rent the cooler or not. Renting of cooler will be possible only when the total renting cost will be less than purchasing it. Print "YES" if he rent's it otherwise print "NO".
+
+Sample Input :
+3
+5 10 1
+5 10 2
+5 10 3
+Sample Output :
+YES
+NO
+NO
+Explanation :
+Cost of renting the cooler = 5 coins. Cost of purchasing the cooler = 10 coins. So, Freddy should rent the cooler as the cost of renting the cooler for 1 month is strictly less than purchasing it.
+Cost of renting the cooler = 10 coins. Cost of purchasing the cooler = 10 coins. So, Freddy should not rent the cooler as the cost of renting the cooler for 2 months is not strictly less than purchasing it.
+Cost of renting the cooler = 15 coins. Cost of purchasing the cooler = 10 coins. So, Treddy should not rent the cooler as the cost of renting the cooler for 3 months is not strictly less than purchasing it.
+*/
+
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        // Your code here
+        Scanner dilemma = new Scanner(System.in);
+        int T = dilemma.nextInt();
+        
+
+
+        while(T > 0){
+
+                int rentPrice = dilemma.nextInt();
+                int purchasePrice = dilemma.nextInt();
+                int duration = dilemma.nextInt();
+                
+            int rentingPrice = rentPrice * duration;
+
+            if(rentingPrice < purchasePrice){
+                System.out.println("YES");
+            }else {
+                System.out.println("NO");
+            }
+            T--;
+        }
+    }
+}
+
+Sample Input :
+3
+5 10 1
+5 10 2
+5 10 3
+Sample Output :
+YES
+NO
+NO
