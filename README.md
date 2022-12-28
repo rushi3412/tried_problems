@@ -1665,3 +1665,39 @@ Sample Output :
 YES
 NO
 NO
+
+
+
+
+/* 
+print the freqency of each elements in the following array 
+1, 2, 2, 2, 3, 3, 5, 20,20, 20
+*/
+
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+    int[] arr = {1,2,2,2,3,3,5,5,10,10,19,19,19,20};
+    int[] arr1 = new int[50];
+    
+    for(int i=0; i<arr.length; i++){
+        arr1[arr[i]]++;
+        
+      }
+   for(int i=0; i<arr1.length; i++){
+        if(arr1[i] > 0){
+        System.out.println(i + " " + arr1[i]);
+     }
+   }
+ }
+}
+input : 1, 2, 2, 2, 3, 3, 5, 20,20, 20
+output: 
+1 1
+2 3
+3 2
+5 1
+20 3
+       
+        
+
