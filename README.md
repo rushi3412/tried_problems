@@ -1700,4 +1700,39 @@ output:
 20 3
        
         
+/*
+    Given an array of N elements, your task is to find the count of repeated elements. Print the repeated elements in ascending order along with their frequency.
+Have a look at the example for more understanding.
+*/
+    
+import java.util.*;
+import java.io.*;
+public class Main{
+    public static void main(String args[]){
+    
+    Scanner freq = new Scanner(System.in);
+    int N = freq.nextInt();
+    
+    int[] arr = new int[N];
+    int[] arr1 = new int[1000000];
+    
+    for(int i=0; i<arr.length; i++){
+       arr[i] = freq.nextInt();
+     }                   
+    for(int i=0; i<arr.length; i++){
+        arr1[arr[i]]++;
+     }
+      for(int i=0; i<arr1.length; i++){
+        if(arr1[i] > 1){
+            System.out.println(i + " " + arr1[i]);
+       }
+    }
+  }
+}
+Sample Input:-
+5
+3 2 1 1 2
 
+Sample Output:-
+1 2
+2 2
