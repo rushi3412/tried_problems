@@ -258,7 +258,7 @@ output:-
 
 
 
-/* simple transpose og matrix 
+/* simple transpose of matrix 
 3
 1 4 5
 4 5 6
@@ -267,31 +267,31 @@ output:-
 
 import java.util.*;
 public class Arr{
-public static void main(String args[]){
-Scanner tra = new Scanner(System.in);
-int N = tra.nextInt();
+   public static void main(String args[]){
+        Scanner tra = new Scanner(System.in);
+            int N = tra.nextInt();
 
-int[][] arr = new int[N][N];
+        int[][] arr = new int[N][N];
 
-for(int i=0; i<N; i++){
-for(int j=0; j<N; j++){
-arr[][] = new int[i][j];
-}
-}
-for(int i=0; i<N; i++){
-for(int j=0; j<N; j++){
-int storage = arr[i][j];
-arr[i][j] = arr[j][i];
-arr[j][i] = storage;
-}
-}
-for(int i=0; i<N; i++){
-for(int j=0; j<N; j++){
-System.out.print(arr[i][j]);
-}
-System.out.println();
-}
-}
+        for(int i=0; i<N; i++){
+            for(int j=0; j<N; j++){
+            arr[][] = new int[i][j];
+        }
+      }
+        for(int i=0; i<N; i++){
+            for(int j=0; j<N; j++){
+            int storage = arr[i][j];
+            arr[i][j] = arr[j][i];
+            arr[j][i] = storage;
+    }
+  }
+        for(int i=0; i<N; i++){
+            for(int j=0; j<N; j++){
+        System.out.print(arr[i][j]);
+    }
+        System.out.println();
+    }
+  }
 }
 
 output:-
