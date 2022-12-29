@@ -265,33 +265,39 @@ output:-
 5 3 1
 */
 
-import java.util.*;
-public class Arr{
-   public static void main(String args[]){
-        Scanner tra = new Scanner(System.in);
-            int N = tra.nextInt();
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
 
-        int[][] arr = new int[N][N];
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        Scanner tran = new Scanner(System.in);
+            int N = tran.nextInt();
 
-        for(int i=0; i<N; i++){
-            for(int j=0; j<N; j++){
-            arr[][] = new int[i][j];
+            int[][] arr = new int[N][N];
+
+            for(int i=0; i<N; i++){
+                for(int j=0; j<N; j++){
+                    arr[i][j] = tran.nextInt();
+                }
+            }
+            for(int i=0; i<N; i++){
+                for(int j=0; j<N; j++){
+                    if(j>i){
+                    int storage = arr[i][j];
+                    arr[i][j] = arr[j][i];
+                    arr[j][i] = storage;
+                    } 
+                }
+            }
+            for(int i=0; i<N; i++){
+                for(int j=0; j<N; j++){
+                    System.out.print(arr[i][j]+ " ");
+                }
+                System.out.println();
         }
-      }
-        for(int i=0; i<N; i++){
-            for(int j=0; j<N; j++){
-            int storage = arr[i][j];
-            arr[i][j] = arr[j][i];
-            arr[j][i] = storage;
     }
-  }
-        for(int i=0; i<N; i++){
-            for(int j=0; j<N; j++){
-        System.out.print(arr[i][j]);
-    }
-        System.out.println();
-    }
-  }
 }
 
 output:-
@@ -1833,3 +1839,55 @@ Input:
 
 Output:
 3 2            
+
+
+
+
+/*
+Given a 2D integer array matrix or size n x n, print the transpose of the given matrix.
+*/
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        Scanner tran = new Scanner(System.in);
+            int N = tran.nextInt();
+
+            int[][] arr = new int[N][N];
+
+            for(int i=0; i<N; i++){
+                for(int j=0; j<N; j++){
+                    arr[i][j] = tran.nextInt();
+                }
+            }
+            for(int i=0; i<N; i++){
+                for(int j=0; j<N; j++){
+                    if(j>i){
+                    int storage = arr[i][j];
+                    arr[i][j] = arr[j][i];
+                    arr[j][i] = storage;
+                    } 
+                }
+            }
+            for(int i=0; i<N; i++){
+                for(int j=0; j<N; j++){
+                    System.out.print(arr[i][j]+ " ");
+                }
+                System.out.println();
+        }
+    }
+}
+Sample input:
+3
+1 2 3
+4 5 6
+7 8 9
+
+Sample Output:
+1 4 7
+2 5 8
+3 6 9
