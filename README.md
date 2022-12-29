@@ -1736,3 +1736,47 @@ Sample Input:-
 Sample Output:-
 1 2
 2 2
+
+
+/*
+check if given string is angram or not
+*/
+
+
+import java.util.*;
+public class jdf{
+    public static void main(String args[]){
+      //  Scanner fre = new Scanner(System.in);
+        int[] arr = new int[26];
+        
+        String str = "dad";
+        String str1 = "min";
+        
+        for(int i=0; i<str.length(); i++){
+            char c = str.charAt(i);
+            int index = (int)(c - 'a');
+            arr[index]++;
+        }
+        
+        for(int i=0; i<str1.length(); i++){
+            char c = str1.charAt(i);
+            int index = (int)(c - 'a');
+            arr[index]--;
+        }
+        boolean ana = true;
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] != 0){
+                ana = false;
+            }
+        }
+        if(ana == true){
+            System.out.print("YES");
+        }else {
+            System.out.print("NO");
+        }
+     
+    }
+}
+input : "dfjk" "dfjk"
+output:
+YES
