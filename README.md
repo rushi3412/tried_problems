@@ -1780,3 +1780,56 @@ public class jdf{
 input : "dfjk" "dfjk"
 output:
 YES
+
+                                   
+                                   
+
+                                   
+/*
+Given a binary array of size N. Count number of 1's and 0's in the array.                                  
+*/                                  
+                                   
+ import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        Scanner binar = new Scanner(System.in);
+        int n = binar.nextInt();
+        int[] arr = new int[n];
+      //  int[] arr1 = {0,1};
+
+        for(int i=0; i<n; i++){
+            arr[i] = binar.nextInt();
+        }
+        int countOfOne = 0;
+       // int countOfZero = 0;
+
+        for(int i=0; i<n; i++){
+            if(arr[i] == 1){
+                 countOfOne++;
+               //  countOfZero++;
+            }
+           
+        }
+         int countOfZero = 0;
+    for(int i=0; i<n; i++){
+        if(arr[i] == 0){
+            countOfZero++;
+        }
+    }
+    System.out.print(countOfOne+ " ");
+      //  for(int i=0; i<arr1.length; i++){
+            System.out.print(countOfZero);
+
+    }
+   
+}
+Input:
+5
+0 1 1 0 1
+
+Output:
+3 2            
