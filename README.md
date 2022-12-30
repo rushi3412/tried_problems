@@ -1891,3 +1891,47 @@ Sample Output:
 1 4 7
 2 5 8
 3 6 9
+
+
+
+/*
+Implement Selection Sort on a given array, and make it sorted.
+*/
+
+import java.util.*;
+public class sect{
+    public static void main(String args[]){
+        Scanner set = new Scanner(System.in);
+        int n = set.nextInt();
+        
+        int[] arr = new int[n];
+        
+        for(int i=0; i<n; i++){
+            arr[i] = set.nextInt();
+        }
+        for(int i=0; i<n; i++){
+            sel(arr);
+            System.out.print(arr[i]+ " ");
+        }
+    }
+    public static void sel(int[] arr){
+        for(int i=0; i<arr.length; i++){
+            int lowest = i;
+            
+            for(int j=i+1; j<arr.length; j++){
+                if(arr[j] < arr[lowest]){
+                    lowest = j;
+                }
+            }
+            int temp = arr[lowest];
+            arr[lowest] = arr[i];
+            arr[i] = temp;
+        }
+    }
+}
+Sample Input:
+3
+3 1 2
+
+Sample Output:
+1 2 3
