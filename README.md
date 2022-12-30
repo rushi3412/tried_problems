@@ -1935,3 +1935,47 @@ Sample Input:
 
 Sample Output:
 1 2 3
+
+                                         
+                                         
+ /*
+Given an array A[ ] of size N containing positive integers, find maximum and minimum elements from the array.
+*/
+                                         
+                                         
+import java.util.*;
+public class maxMn{
+    public static void main(String args[]){
+        Scanner ele = new Scanner(System.in);
+            int T = ele.nextInt();
+            
+            while(T-- > 0){
+                
+                int N = ele.nextInt();
+                int[] arr = new int[N];
+                
+                for(int i=0; i<N; i++){
+                    arr[i] = ele.nextInt();
+                }
+                int max = arr[0];
+                int min = arr[0];
+                for(int i=0; i<N; i++){
+                    if(arr[i] > max)
+                        max = arr[i];
+                        if(arr[i] < min)
+                            min = arr[i];
+                }
+                System.out.println(max + " " + min);
+        }
+    }
+}
+Sample Input:
+2
+5
+7 3 4 5 6
+4
+1 2 3 4
+
+Sample Output:
+7 3
+4 1 
