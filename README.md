@@ -1979,3 +1979,56 @@ Sample Input:
 Sample Output:
 7 3
 4 1 
+
+
+
+
+
+/*
+Given an array of N integers, give the number with maximum frequency. If multiple numbers have maximum frequency print the maximum number among them.
+*/
+
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        Scanner maxFre = new Scanner(System.in);
+        int N = maxFre.nextInt();
+        int[] arr = new int[N]; // {1 2 9 1 9 3 2 9 4 2}
+        int[] countArray = new int[10000]; // [0 2 3 1 1 0 0 0 0 3]
+        int maxcount = 0;
+        int element = 0;
+
+        for(int i=0; i<N; i++){
+            arr[i] = maxFre.nextInt();
+        }
+        for(int i=0; i<N; i++){ // i = 10
+           /* max =*/ countArray[arr[i]]++;    //        -->  countArray[arr[9]]++; --> countArray[2]++
+        }  
+        // maxcount = 3        element = 2
+        for(int i=0; i<countArray.length; i++){ // i = 9
+
+            if(countArray[i] > maxcount){ //   3 > 3
+                maxcount = countArray[i];
+                element = i;
+    
+            }else if(countArray[i] == maxcount && i > element){ // 3 == 3  && 9 > 2 
+                element = i; 
+            }
+        }
+        System.out.print(element);
+    }
+    
+}
+Sample Input
+5
+1 4 2 4 5
+
+Sample Output
+4
+
+Explanation:-4 has max frequency=2
