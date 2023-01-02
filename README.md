@@ -2032,3 +2032,43 @@ Sample Output
 4
 
 Explanation:-4 has max frequency=2
+
+
+/*
+Maruti is having an array nums having n integers in it. the first element of the array is the leader of it but Maruti doesn't like that so he wants to remove that element and make the second element as a leader.
+Now print the elements of array nums modified by Maruti.
+*/
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        // Your code here
+        Scanner firstEle = new Scanner(System.in);
+        int n = firstEle.nextInt();
+        int[] arr = new int[n];
+
+        for(int i=0; i<n; i++){
+            arr[i] = firstEle.nextInt();
+        }
+        boolean removeFirst = false;
+        for(int i=0; i<n; i++){
+            if(arr[i] != 0){
+               removeFirst = true;
+            }
+        }
+        if(removeFirst == true){
+            for(int i= 1; i<n; i++){
+                System.out.print(arr[i]+ " ");
+            }
+        }
+    }
+}
+Sample Input:
+6
+1233 1324 545 23 656 76
+Sample Output:
+1324 545 23 656 76
