@@ -2072,3 +2072,45 @@ Sample Input:
 1233 1324 545 23 656 76
 Sample Output:
 1324 545 23 656 76
+
+
+
+/*
+Question: Median of an array
+        Input: [7 ,5, 1, 8, 3, 6, 0, 9, 4,2]
+        Output: 4.5
+        explanation: after sorting take numers which are in the middle...
+*/
+
+
+import java.util.*;
+public class searched{
+    public static void main(String args[]){
+        Scanner mead = new Scanner(System.in);
+        
+        int N = mead.nextInt();
+        
+        int[] arr = new int[N];
+        
+        for(int i=0; i<N; i++){
+            arr[i] = mead.nextInt();
+        }
+        double ans = meadian(arr);
+        System.out.print(ans);
+    }
+    
+    public static double meadian(int[] arr){
+        Arrays.sort(arr);
+            if(arr.length % 2 == 0){
+                int meadian1 = arr.length/2;
+                int meadian2 = (arr.length/2) - 1;
+                
+                return (arr[meadian2] + arr[meadian1]) /2.0;
+            }else {
+               return arr[arr.length/2];
+            }
+        }
+}
+
+Input: [7 ,5, 1, 8, 3, 6, 0, 9, 4,2]
+Output: 4.5
