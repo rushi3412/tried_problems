@@ -2114,3 +2114,39 @@ public class searched{
 
 Input: [7 ,5, 1, 8, 3, 6, 0, 9, 4,2]
 Output: 4.5
+
+                            
+                            
+/*
+    Question: Mean of an array
+    Input: [10, 90, 100]
+    Output: 200 /3 = 66.666;
+    Explanation: average. Add all the marks and divide it to number of subjects.....
+*/                            
+                            
+import java.util.*;
+public class searched{
+    public static void main(String args[]){
+        Scanner mead = new Scanner(System.in);
+        
+        int N = mead.nextInt();
+        
+        int[] arr = new int[N];
+        
+        for(int i=0; i<N; i++){
+            arr[i] = mead.nextInt();
+        }
+        double ans = meadian(arr);
+        System.out.printf("%.2f", ans);
+    }
+    
+    public static double meadian(int[] arr){
+       double sum = 0.0;
+       for(int i=0; i<arr.length; i++){
+           sum += arr[i];
+       }
+       return sum / arr.length;
+    }
+}                            
+Input: [10, 90, 100]
+Output: 200 /3 = 66.666;                            
