@@ -2347,3 +2347,41 @@ class Solution {
 }           
 Input: nums = [1,3,5,6], target = 5
 Output: 2                             
+
+
+
+/* 
+implementing the buble sort 
+*/
+
+
+
+import java.util.*;
+public class jg{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        for(int i=0; i<n; i++){
+            bub(arr);
+            System.out.print(arr[i] + " ");
+        }
+    }
+    public static void bub(int[] arr){
+        for(int i=0; i<arr.length; i++){
+            for(int j=0; j<arr.length - 1 - i; j++){
+                if(arr[j] > arr[j+ 1]){
+                    int tem = arr[j];
+                    arr[j]  = arr[j + 1];
+                    arr[j + 1] = tem;
+                }
+            }
+        }
+    }
+}
+input : 3 
+3 1 2
+output : 1 2 3 
