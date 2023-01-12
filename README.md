@@ -1489,7 +1489,7 @@ public class pra{
      System.out.print(n+ " ");
                               
     //faith   
-     decreasinRecur(n -1);
+     decreasinRecur(n - 1);
       return;
      }
   }
