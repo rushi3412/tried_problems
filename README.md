@@ -2425,3 +2425,43 @@ input :
 9 3 5 6
 output :
 3 5 6 9 
+
+
+/*
+implement the selection Sort
+*/
+
+
+import java.util.*;
+public class skdf{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        for(int i=0; i<n; i++){
+            selectionSort(arr);
+            System.out.print(arr[i] + " ");
+        }
+    }
+    public static void selectionSort(int[] arr){
+        for(int i=0; i<arr.length; i++){
+            int lowest = i;
+            for(int j=0; j<arr.length; j++){
+                if(arr[j] > arr[lowest]){
+                    lowest = j;
+                }
+            }
+            int temp = arr[lowest];
+            arr[lowest] = arr[i];
+            arr[i] = temp;
+        }
+    }
+}
+input :
+4 
+9 3 5 6
+input :
+3 6 5 9 
