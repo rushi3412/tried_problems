@@ -2465,3 +2465,45 @@ input :
 9 3 5 6
 input :
 3 6 5 9 
+
+
+
+
+
+/*
+Given an array of N integers, give the number with maximum frequency. If multiple numbers have maximum frequency print the maximum number among them
+*/
+
+
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        Scanner maxFre = new Scanner(System.in);
+        int N = maxFre.nextInt();
+        int[] arr = new int[N];
+        int[] arr1 = new int[10000];
+        int maxcount = 0;
+        int maxFreEle = 0;
+
+        for(int i=0; i<N; i++){
+            arr[i] = maxFre.nextInt();
+        }
+        for(int i=0; i<N; i++){
+           /* max =*/ arr1[arr[i]]++;           
+        }
+
+        for(int i=0; i<arr1.length; i++){
+
+            if(arr1[i] > maxcount && arr1[i] > arr[i]){
+                maxcount = arr1[i];
+                maxFreEle = i;
+
+                System.out.print(maxFreEle);
+            }
+        }
+    }
+}
