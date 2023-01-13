@@ -2507,3 +2507,71 @@ class Main {
         }
     }
 }
+
+    
+    
+    
+    
+    
+    
+    
+/*    
+Maximum and Minimum in an Array
+*/
+    
+    
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        Scanner eleme = new Scanner(System.in);
+        int T = eleme.nextInt();
+        int N = eleme.nextInt();
+        int[] arr = new int[N];
+        int max = 0;
+        int min = 0;
+
+        while(T-- > 0){
+
+            for(int i=0; i<N; i++){
+            arr[i] = eleme.nextInt();
+            // int ans = fidMax()
+        }
+
+      //  int max = 0;
+//public static int fidMax(int[] arr, int N){
+    for(int i=0; i<N; i++){
+      max = arr[0];
+      if(arr[i] > max){
+        max = arr[i];
+      }
+          // int  max = arr[0];
+          //   max = Math.max(max, arr[i]);
+          //  if(arr[i] >= max){
+               // max = arr[i];
+          //  }   
+
+        }
+        // return max;
+
+}
+public static int fidMin(int[] arr, int N) {
+      //int min = 0;
+        for(int i=1; i<N; i++){
+          int   min = arr[0];
+            min = Math.min(min, arr[i]);
+               //min = arr[i];
+           // }
+        }
+        return min;
+
+}
+       
+            // System.out.print(max);
+            // System.out.print(min);        
+        }
+    }
+}    
