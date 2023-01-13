@@ -2385,3 +2385,43 @@ public class jg{
 input : 3 
 3 1 2
 output : 1 2 3 
+
+
+
+/*
+implement insert sort
+*/
+
+
+
+import java.util.*;
+public class kldf{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        for(int i=0; i<n; i++){
+            insertSort(arr);
+            System.out.print(arr[i] + " ");
+        }
+    }
+    public static void insertSort(int[] arr){
+        for(int i=0; i<arr.len; i++){
+            for(int j=i; j>=1; j--){
+                if(arr[j] < arr[j- 1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j- 1];
+                    arr[j - 1] = temp;
+                }
+            }
+        }
+    }
+}
+input : 
+4 
+9 3 5 6
+output :
+3 5 6 9 
