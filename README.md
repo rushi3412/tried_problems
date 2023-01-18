@@ -2627,3 +2627,32 @@ public class dfk{
 output :
 [1, 2, 3, 4]    
     
+
+
+    
+/*
+insert an integer in an given any number of array
+*/    
+    
+import java.util.*;
+import java.util.ArrayList;
+public class dk{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        ArrayList<Integer> al = new ArrayList<>();
+        for(int i=0; i<n; i++){
+            al.add(in.nextInt());
+        }
+        al.add(1,3);
+        System.out.print(al);
+    }
+}    
+input :
+5
+1 3 4 5 6                                                 
+output:
+[1, 3, 3, 4, 5, 6]
+                                                 
+                                                 
+                                                 
