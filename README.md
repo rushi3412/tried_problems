@@ -2656,3 +2656,32 @@ output:
                                                  
                                                  
                                                  
+/*
+insert an given element at any given position in an array given by the user
+*/
+                                                 
+                                                 
+                                                 
+import java.util.*;
+import java.util.ArrayList;
+public class kd{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int a = in.nextInt();
+        int nu = in.nextInt();
+        
+        ArrayList<Integer> al = new ArrayList<>();
+        for(int i=0; i<n; i++){
+            al.add(in.nextInt());
+        }
+        al.add(a,nu);
+        System.out.print(al);
+    }
+} 
+input :                                                 
+5 0 9
+1 3 4 5 6                                                 
+output :                                                 
+[9, 1, 3, 4, 5, 6]                                                 
+                                                 
