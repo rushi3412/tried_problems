@@ -2602,3 +2602,28 @@ input:
 1 3 4
 output:
 [1, 3, 4]
+
+                                                 
+                                                 
+/*
+insert an integer at given position
+*/                                                 
+                                                 
+import java.util.*;
+import java.util.ArrayList;
+public class dfk{
+    public static void main(String args[]){
+        
+        ArrayList<Integer> al = new ArrayList<>();
+        
+        al.add(2);
+        al.add(3);
+        al.add(4);
+        al.add(0, 1);
+        
+        System.out.print(al);
+    }
+}                                                
+output :
+[1, 2, 3, 4]    
+    
