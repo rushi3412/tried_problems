@@ -2685,3 +2685,43 @@ input :
 output :                                                 
 [9, 1, 3, 4, 5, 6]                                                 
                                                  
+
+                                                 
+                                                 
+/*
+            fill an array list, sum of all the integers inside it ...
+            Input = : [12,45,78,90,1]
+            output: sum of above no...
+     */                                                 
+                                                 
+import java.util.*;
+import java.util.ArrayList;
+public class dj{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        
+        ArrayList<Integer> al = new ArrayList<>();
+        
+        for(int i=0; i<n; i++){
+            al.add(in.nextInt());
+            
+        }
+        int ans = sumOfInt(al);
+        System.out.print(ans);
+    }
+    public static int sumOfInt(ArrayList<Integer> al){
+        int sum =0; 
+            for(int i=0; i<al.size(); i++){
+                sum += al.get(i);
+            }
+            return sum;
+    }
+}                 
+input :
+5
+1 2 3 4 5
+output :
+15                                      
+                                      
+                                      
