@@ -2724,4 +2724,31 @@ input :
 output :
 15                                      
                                       
+  
+/*
+print fizzbuzz if integer is divisible by 3 nd 5 print fizz if it is divisible by 3 only                                      
+print buzz if it is divisible by 5 only else print the interger                                      
+*/                                      
                                       
+import java.util.*;
+public class dk{
+    public static void main(String args[]){
+        int n = 15;
+        
+        for(int i=1; i<=n; i++){
+            if(i % 3 == 0 && i % 5 == 0){
+                System.out.println("fizzbuzz");
+            }else if(i % 3 == 0){
+                 System.out.println("fizz");
+            }else if(i % 5 == 0){
+                 System.out.println("buzz");
+            }else {
+                System.out.println(i);
+            }
+        }
+    }
+}                                      
+input :
+3 
+ouput :    
+1 2 fizz    
