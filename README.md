@@ -2848,3 +2848,37 @@ class Solution {
 }
 Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
 Output: [1,2,2,3,5,6]
+
+    
+    
+    
+    
+/*
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+ 
+
+Example 1:
+
+Input: nums = [2,2,1]
+Output: 1
+*/
+    
+    
+class Solution {
+    public int singleNumber(int[] nums) {
+    Arrays.sort(nums);
+    for(int i=0; i<nums.length - 1; i++){
+        if(nums[i] != nums[i + 1]){
+            return nums[i];
+        }
+        i++;
+    }
+    return nums[nums.length - 1];
+    }
+}
+Input: nums = [2,2,1]
+Output: 1                               
+    
