@@ -2882,3 +2882,28 @@ class Solution {
 Input: nums = [2,2,1]
 Output: 1                               
     
+
+
+
+print dkd if a number is divisible by both 3 nd 5 
+nd print dk if it is divisible by 3 nd dd for 5
+
+
+import java.util.*;
+public class dk{
+    public static void main(String args[]){
+        int n= 20;
+        
+        for(int i=0; i<n; i++){
+            if(i % 3 == 0 && i % 5 == 0){
+                System.out.println("dkd");
+            }else if(i % 3 == 0){
+                  System.out.println("dd");
+            }else if( i % 5 == 0){
+                System.out.println("dk");
+            }else {
+                System.out.println(i);
+            }
+        }
+    }
+}
