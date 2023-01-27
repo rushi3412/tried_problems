@@ -3067,3 +3067,57 @@ public Class Solution {
 Input: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5
 Output: true     
     
+
+    
+    
+/*
+segrigate one nd zero 
+input :
+5
+1 0 1 0 0
+output :
+0 0 0 1 1 
+*/    
+    
+import java.util.*;
+public class fj{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        oneS(arr);
+        for(int i=0; i<n; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+    public static void oneS(int[] arr){
+        int left = 0;
+        int right = arr.length - 1;
+        
+        while(left < right){
+            
+            while(left < arr.length && arr[left] == 0){
+                left++;
+            }
+            while(right >= 0 && arr[right] == 1){
+                right--;
+            }
+            if(left < right){
+                arr[left] = 0;
+                arr[right] = 1;
+                left++;
+                right--;
+            }
+        }
+    }
+}    
+input :
+5
+1 0 1 0 0
+output :
+0 0 0 1 1     
+    
