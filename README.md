@@ -3019,3 +3019,51 @@ public class op{
 }    
 Input: nums = [3,4,5,1,2]
 Output: 1    
+
+    
+    
+/*
+240. Search a 2D Matrix II
+Medium
+9.9K
+165
+Companies
+Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:
+
+Integers in each row are sorted in ascending from left to right.
+Integers in each column are sorted in ascending from top to bottom.
+ 
+
+Example 1:
+1,4,7,11,15
+2,5,8,12,19
+3,6,9,16,22
+10,13,14,17,24
+18,21,23,26,30    
+Input: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5
+Output: true    
+    
+    
+public Class Solution {
+    public static int searchMatrix(int[] matrix, int target){
+        int row = 0;
+        int col = matrix[0].length- 1;
+        
+        while(row < matrix.length && col >= 0){
+            int item = matrix[row][col];
+            
+            if(item == target){
+                return true;
+            }
+            if(item > target){
+                col--;
+            }else {
+                row++;
+            }
+        }
+        return false;
+    }
+}    
+Input: matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5
+Output: true     
+    
