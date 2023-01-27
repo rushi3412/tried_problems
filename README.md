@@ -2907,3 +2907,55 @@ public class dk{
         }
     }
 }
+
+
+
+/*
+insert the index of a missing number
+input :
+4 4
+1 3 5 6
+output :
+2
+*/
+
+
+
+import java.util.*;
+public class op{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int target = in.nextInt();
+        int[] arr = new int[n];
+        
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+            
+        }
+        int ans = searchInsert(arr, target);
+        System.out.print(ans);
+    }
+    public static int searchInsert(int[] arr, int target){
+        int left = 0;
+        int right = arr.length - 1;
+        
+        while(left <= right){
+            int mid = left + (right - left)/ 2;
+            
+            if(arr[mid] == target){
+                return mid;
+            }else if(arr[mid] > target){
+                right = mid - 1;
+            }else {
+                left = mid + 1;
+            }
+        }
+         return left;
+    }
+}
+input :
+4 4
+1 3 5 6
+output :
+2
