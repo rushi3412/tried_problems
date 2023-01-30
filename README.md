@@ -3121,3 +3121,27 @@ input :
 output :
 0 0 0 1 1     
     
+
+
+/*
+create Create LinkedList in Java (add).
+
+import java.util.LinkedList;
+public class Main {
+    public static void main(String args[]){
+        
+        LinkedList<String> animals = new LinkedList<>();
+        LinkedList<Integer> lifeSpan = new LinkedList<>();
+        
+        animals.add("dog");
+        lifeSpan.add(20);
+        animals.add("cat");
+        lifeSpan.add(15);
+        
+        System.out.println("name Of Animal --" + animals);
+        System.out.println("its lifeSpan--" + lifeSpan);
+    }
+}
+ouput :
+name Of Animal --[dog, cat]
+its lifeSpan--[20, 15]
