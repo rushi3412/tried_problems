@@ -2373,10 +2373,10 @@ public class jg{
     public static void bub(int[] arr){
         for(int i=0; i<arr.length; i++){
             for(int j=0; j<arr.length - 1 - i; j++){
-                if(arr[j] > arr[j+ 1]){
-                    int tem = arr[j];
+                if(arr[j] > arr[j + 1]){
+                    int temp = arr[j];
                     arr[j]  = arr[j + 1];
-                    arr[j + 1] = tem;
+                    arr[j + 1] = temp;
                 }
             }
         }
@@ -3264,7 +3264,7 @@ output: 5 6 8 90
 
 
 /*
-implement selection sort
+implement selection sort (redone)
 */
 
 import java.util.*;
@@ -3301,3 +3301,41 @@ input :
 4 3 5 1
 output :
 1 3 4 5
+
+                                         
+/*
+implement bubleSort (redone)
+*/                                         
+                                                                            
+import java.util.*;
+public class kd{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+       
+            for(int i=0; i<n; i++){
+                bubleSort(arr);
+                System.out.print(arr[i] + " ");
+        }
+    }
+    public static void bubleSort(int[] arr){
+        for(int i=0; i<arr.length; i++){
+            for(int j=0; j<arr.length - 1 - i; j++){
+                if(arr[j] > arr[j + 1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+}      
+input :    
+4
+4 3 5 1    
+output :    
+1 3 4 5     
