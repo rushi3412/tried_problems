@@ -2413,7 +2413,7 @@ public class kldf{
             for(int j=i; j>=1; j--){
                 if(arr[j] < arr[j- 1]){
                     int temp = arr[j];
-                    arr[j] = arr[j- 1];
+                    arr[j] = arr[j - 1];
                     arr[j - 1] = temp;
                 }
             }
@@ -3339,3 +3339,43 @@ input :
 4 3 5 1    
 output :    
 1 3 4 5     
+
+    
+/*
+implement insertSort (redo)
+*/    
+import java.util.*;
+public class kd{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        for(int i=0; i<n; i++){
+            insertSort(arr);
+            System.out.print(arr[i] + " ");
+        }
+    }
+    public static void insertSort(int[] arr){
+        for(int i=0; i<arr.length; i++){
+            for(int j=i; j>=1; j--){
+                if(arr[j] < arr[j - 1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = temp;
+                }
+            }
+        }
+    }
+}   
+input : 
+4
+4 3 5 1                                 
+output :    
+1 3 4 5     
+    
+    
+    
+    
