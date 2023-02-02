@@ -3260,3 +3260,44 @@ public class mer{
 input:  4
         8 5 6 90
 output: 5 6 8 90 
+
+
+
+/*
+implement selection sort
+*/
+
+import java.util.*;
+public class kd{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        for(int i=0; i<n; i++){
+            selectionSort(arr);
+            System.out.print(arr[i] + " ");
+        }
+    }
+    public static void selectionSort(int[] arr){
+        for(int i=0; i<arr.length; i++){
+            int lowest = i;
+            
+            for(int j=i+ 1; j<arr.length; j++){
+                if(arr[j] < arr[lowest]){
+                    lowest = j;
+                }
+            }
+            int temp = arr[lowest];
+            arr[lowest] = arr[i];
+            arr[i] = temp;
+        }
+    }
+}
+input :
+4
+4 3 5 1
+output :
+1 3 4 5
