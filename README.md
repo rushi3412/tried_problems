@@ -2786,11 +2786,11 @@ public class dk{
                  arr[j] = temp;
             }
         }
-        int temp = arr[i+ 1];
+        int temp = arr[i + 1];
         arr[i + 1] = arr[high];
         arr[high] = temp;
         
-        return i+ 1;
+        return i + 1;
     }
     public static void quickSort(int[] arr,int low, int high){
         if(low > high){
@@ -3377,5 +3377,54 @@ output :
 1 3 4 5     
     
     
+
+/*
+implement quickSort(redone)                                 
+*/                                 
     
+import java.util.*;
+public class dk{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        qui(arr, 0, arr.length - 1);
+        for(int i=0; i<n; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+    public static int part(int[] arr, int low, int high){
+        int piv = arr[high];
+        int i = low - 1;
+        for(int j=low; j<high; j++){
+            if(arr[j] < piv){
+                i++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+        
+        return i+ 1;
+    }
+    public static void qui(int[] arr, int low, int high){
+        if(low > high){
+            return;
+        }
+        int pi = part(arr, low, high);
+        qui(arr, low, pi - 1);
+        qui(arr, pi + 1, high);
+    }
+}
+input : 
+4
+4 3 5 1    
+output :
+1 3 4 5     
     
