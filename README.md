@@ -3474,3 +3474,45 @@ public class jdf{
 input : "dfjk" "dfjk"
 output:
 YES
+
+
+
+
+
+/*
+print fizzbuzz if integer is divisible by 3 nd 5 print fizz if it is divisible by 3 only                                      
+print buzz if it is divisible by 5 only else print the interger  in arraylist using arrray                                  
+*/ 
+
+import java.util.*;
+import java.util.ArrayList;
+public class kd{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for(int i=0; i<n; i++){
+            list.add(in.nextInt());
+        }
+        for(int i=0; i<n; i++){
+            if(list.get(i) % 3 == 0 && list.get(i) % 5 == 0){
+                System.out.println("fizzBuzz");
+            }else if(list.get(i) % 3 == 0){
+                System.out.println("Fizzz");
+            }else if(list.get(i) % 5 == 0){
+                System.out.println("Buzz");
+            }else{
+                System.out.println(list.get(i));
+            }
+        }
+    }
+}
+input: 
+3 
+15 5 3
+output :
+fizzBuzz
+Buzz
+Fizzz
