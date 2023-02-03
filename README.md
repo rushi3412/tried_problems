@@ -3516,3 +3516,40 @@ output :
 fizzBuzz
 Buzz
 Fizzz
+
+    
+    
+    
+/*
+    Given an array of N elements, your task is to find the count of repeated elements. Print the repeated elements in ascending order along with their frequency.
+Have a look at the example for more understanding.(redone)
+*/    
+    
+ import java.util.*;
+public class kd{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        int[] arr1 = new int[100000];
+        
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        for(int i=0; i<n; i++){
+            arr1[arr[i]]++;
+        }
+        for(int i=0; i<arr1.length; i++){
+            if(arr1[i] > 0){
+                System.out.println(i + " " + arr1[i]);
+            }
+        }
+    }
+}
+input:
+5
+15 15 3 4 4    
+output:    
+3 1
+4 2
+15 2    
