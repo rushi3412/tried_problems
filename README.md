@@ -3553,3 +3553,38 @@ output:
 3 1
 4 2
 15 2    
+
+    
+/*
+Given a binary array of size N. Count number of 1's and 0's in the array.(updated, redone)                                  
+*/    
+
+import java.util.*;
+public class dk{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+            int n  = in.nextInt();
+            int[] arr = new int[n];
+            for(int i=0; i<n; i++){
+                arr[i] = in.nextInt();
+            }
+            int onsCount = 0;
+            for(int i=0; i<n; i++){
+                if(arr[i] == 1){
+                    onsCount++;
+                }
+            }
+            int zeroCount = 0;
+            for(int i=0; i<n; i++){
+                if(arr[i] == 0){
+                    zeroCount++;
+                }
+            }
+            System.out.print(onsCount + " " + zeroCount);
+        }
+}    
+input :
+5
+0 1 1 0 1                              
+output :    
+3 2                              
