@@ -3632,3 +3632,41 @@ input :
 1 4 5
 output :
 0
+
+
+
+    /*
+        Question: Frequency of items inside the array
+        Input: [1,2,3,5,1,2,5,6,1,1,2]
+        Output:
+     */
+     
+import java.util.*;
+import java.util.HashMap;
+public class kd{
+    public static void main(String args[]){
+        HashMap<Integer, Integer> map = new HashMap();
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        for(int i=0; i<n; i++){
+            int key = arr[i];
+            
+            if(!map.containsKey(key)){
+                map.put(key, 1);
+            }else {
+                int oldVal = map.get(key);
+                    map.put(key, oldVal + 1);
+                }
+        }
+        System.out.print(map);
+    }
+}
+input :
+11
+1 2 3 5 1 2 5 6 1 1 2
+output :
+{1=4, 2=3, 3=1, 5=2, 6=1}
