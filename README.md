@@ -3707,3 +3707,38 @@ input :
 output :
 {1=4, 2=3, 3=1, 5=2, 6=1}
     
+
+    
+  /*
+           Question: Find out the duplicate in list
+           Input: [1,2,3,4,5,6,89,90,3,12,15,17,1000,123];
+           Output: 3
+     */    
+    
+    
+    
+ import java.util.*;
+import java.util.HashSet;
+public class dk{
+    public static void main(String args[]){
+        HashSet set = new HashSet();
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        for(int i=0; i<n; i++){
+            if(set.contains(arr[i])){
+                System.out.println(arr[i] + " ");
+            }else if(!set.contains(arr[i])){
+                set.add(arr[i]);
+            }else {
+                 System.out.println("-1");
+            }
+        }
+       
+    }
+}   
+Input: [1,2,3,4,5,6,89,90,3,12,15,17,1000,123];
+Output: 3    
