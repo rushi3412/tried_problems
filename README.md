@@ -3655,8 +3655,8 @@ public class kd{
         for(int i=0; i<n; i++){
             int key = arr[i];
             
-            if(!map.containsKey(key)){
-                map.put(key, 1);
+            if(!map.containsKey(key)){  // what it ask is that if there is an element which already exists in the 
+                map.put(key, 1);         // list or not if NO then execuete the if condition else do the else condition
             }else {
                 int oldVal = map.get(key);
                     map.put(key, oldVal + 1);
@@ -3670,3 +3670,5 @@ input :
 1 2 3 5 1 2 5 6 1 1 2
 output :
 {1=4, 2=3, 3=1, 5=2, 6=1}
+
+    
