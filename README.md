@@ -3672,3 +3672,38 @@ output :
 {1=4, 2=3, 3=1, 5=2, 6=1}
 
     
+
+    
+  /*
+        Question: Frequency of items inside the array(shroter method )
+        Input: [1,2,3,5,1,2,5,6,1,1,2]
+        Output:
+     */    
+    
+    
+import java.util.*;
+import java.util.HashMap;
+public class kd{
+    public static void main(String args[]){
+    HashMap<Integer, Integer> map = new HashMap();
+    Scanner in = new Scanner(System.in);
+    int n = in.nextInt();
+    int[] arr = new int[n];
+    for(int i=0; i<n; i++){
+        arr[i] = in.nextInt();
+    }
+    for(int i=0; i<n; i++){
+        int key = arr[i];
+        
+     map.put(key, map.getOrDefault(key, 0)+ 1);
+    }
+    System.out.print(map);
+    
+   }
+}    
+input :
+11
+1 2 3 5 1 2 5 6 1 1 2
+output :
+{1=4, 2=3, 3=1, 5=2, 6=1}
+    
