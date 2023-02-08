@@ -3770,3 +3770,47 @@ input:
 1 3 4
 output:
 [1, 3, 4]
+
+
+
+/*
+inset target at the correct postion nd returnt the index
+*/
+
+
+import java.util.*;
+public class dk{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int target = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+       int ans =  sear(arr, target);
+        System.out.print(ans);
+    }
+    public static int sear(int[] arr, int target){
+        int left = 0;
+        int right = arr.length - 1;
+        
+        while(left <= right){
+            int mid = left + (right - left)/ 2;
+            
+            if(arr[mid] == target){
+                return mid;
+            }else if(arr[mid] > target){
+                right = mid - 1;
+            }else {
+                left = mid + 1;
+            }
+        }
+         return left;
+    }
+}
+input :
+3 1
+1 4 5
+output :
+0
