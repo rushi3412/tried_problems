@@ -4138,7 +4138,8 @@ input:
 1 2 2 2
 output :
 1
-
+*/
+    
 import java.util.*;
 public class od{
     public static void main(String args[]){
@@ -4171,3 +4172,49 @@ public class od{
         return right;
     }
 }
+
+    
+    
+    
+/*
+find the first occurence of the arrray using binary search
+input:
+4 2
+1 2 2 2
+output :
+3
+*/    
+ 
+    
+import java.util.*;
+public class od{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int target = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        int ans = last(arr, target);
+        System.out.print(ans);
+    }
+    public static int last(int[] arr, int target){
+        int left =0;
+        int right = arr.length - 1;
+        
+        while(left <= right){
+            
+            int mid = left + (right - left)/2;
+            
+            if((mid == arr.length - 1 || arr[mid + 1] > target) && arr[mid] == target){
+                return mid;
+            }else if(arr[mid] > target){
+                right = mid - 1;
+            }else {
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
+}    
