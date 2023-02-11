@@ -4177,7 +4177,7 @@ public class od{
     
     
 /*
-find the first occurence of the arrray using binary search
+find the last occurence of the arrray using binary search
 input:
 4 2
 1 2 2 2
@@ -4208,6 +4208,73 @@ public class od{
             int mid = left + (right - left)/2;
             
             if((mid == arr.length - 1 || arr[mid + 1] > target) && arr[mid] == target){
+                return mid;
+            }else if(arr[mid] > target){
+                right = mid - 1;
+            }else {
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
+}    
+
+    
+    
+    
+/*
+find the first nd last occurence of the arrray using binary search
+input:
+4 2
+1 2 2 2
+output :
+1 3
+*/    
+    
+    
+    
+import java.util.*;
+public class dk{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int target = in.nextInt();
+      //  int target2 = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        int ans = first(arr, target);
+        int ans2 = last(arr, target);
+        System.out.print(ans + " " + ans2);
+    }
+    public static int first(int[] arr,int target){
+        int left = 0;
+        int right = arr.length - 1;
+        
+        while(left <= right){
+            
+            int mid = left + (right - left)/2;
+            
+            if((mid == 0 || arr[mid - 1] < target  && arr[mid] == target)){
+                return mid;
+            }else if(arr[mid] < target){
+                left = mid + 1;
+            }else {
+                right = mid - 1;
+            }
+        }
+        return right;
+    }
+    public static int last(int[] arr, int target){
+        int left = 0;
+        int right = arr.length - 1;
+        
+        while(left <= right){
+            
+            int mid = left + (right - left)/2;
+            
+            if((mid == arr.length - 1 || arr[mid + 1] > target && arr[mid] == target)){
                 return mid;
             }else if(arr[mid] > target){
                 right = mid - 1;
