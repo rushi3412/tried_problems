@@ -3124,7 +3124,7 @@ output :
 
 
 /*
-create Create LinkedList in Java (add).
+Create LinkedList in Java (add).
 
 import java.util.LinkedList;
 public class Main {
@@ -3695,7 +3695,7 @@ public class kd{
     for(int i=0; i<n; i++){
         int key = arr[i];
         
-     map.put(key, map.getOrDefault(key, 0)+ 1);
+     map.put(key, map.getOrDefault(key, 0) + 1);
     }
     System.out.print(map);
     
