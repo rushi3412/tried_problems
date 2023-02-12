@@ -4285,3 +4285,30 @@ public class dk{
         return left;
     }
 }    
+
+
+
+/*
+taking input from ArrayList (redone)
+*/
+
+
+import java.util.*;
+import java.util.ArrayList;
+public class df{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        ArrayList<Integer> al = new ArrayList<>(n);
+        
+        for(int i=0; i<n; i++){
+           al.add(in.nextInt());
+        }
+         System.out.print(al);
+    }
+}
+input:
+3
+1 3 4
+output:
+[1, 3, 4]
