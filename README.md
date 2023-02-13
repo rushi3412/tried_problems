@@ -4289,7 +4289,7 @@ public class dk{
 
 
 /*
-taking input from ArrayList (redone)
+taking input from ArrayList (redone again)
 */
 
 
