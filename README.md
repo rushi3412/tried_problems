@@ -4379,3 +4379,6 @@ public class id{
         }
     }
 }
+input:  4
+        8 5 6 90
+output: 5 6 8 90 
