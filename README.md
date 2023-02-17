@@ -4375,3 +4375,22 @@ public class id{
 input:  4
         8 5 6 90
 output: 5 6 8 90 
+
+
+/*
+implement linkedList
+*/
+
+import java.util.*;
+import java.util.LinkedList;
+public class kd{
+    public static void main(String args[]){
+        LinkedList<String> name = new LinkedList<>();
+        LinkedList<Integer> age = new LinkedList<>();
+        
+        name.add("RD");
+        age.add(700);
+        
+        System.out.print(name + "s age is" + age + "years ");
+    }
+}
