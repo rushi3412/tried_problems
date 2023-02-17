@@ -173,3 +173,57 @@ input:
 4 2 1 3
 output:
 1 2 3 4 
+
+
+
+
+/*
+implement quick sort
+*/
+
+import java.util.*;
+public class kd{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+         qu(arr, 0, arr.length - 1);
+        for(int i = 0; i<n; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+        public static int que(int[] arr, int low, int high){
+            int piv = arr[high];
+            int i = low - 1;
+            for(int j=low; j<high; j++){
+                if(arr[j] < piv){
+                    i++;
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+            int temp = arr[i + 1];
+            arr[i + 1] = arr[high];
+            arr[high] = temp;
+            
+            return i + 1;
+        }
+        public static void qu(int[] arr, int low, int high){
+            if(low > high){
+                return;
+            }
+            int pi = que(arr, low, high);
+            qu(arr, low, pi - 1);
+            qu(arr, pi + 1, high);
+        }
+     }
+input :
+4
+4 2 1 3
+output:
+1 2 3 4 
+     
