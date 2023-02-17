@@ -2428,7 +2428,8 @@ output :
 
 
 /*
-implement the selection Sort
+implement the selection Sort 
+(decending order)
 */
 
 
@@ -2449,7 +2450,7 @@ public class skdf{
     public static void selectionSort(int[] arr){
         for(int i=0; i<arr.length; i++){
             int lowest = i;
-            for(int j=0; j<arr.length; j++){
+            for(int j=i + 1; j<arr.length; j++){
                 if(arr[j] > arr[lowest]){
                     lowest = j;
                 }
