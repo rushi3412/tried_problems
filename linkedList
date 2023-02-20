@@ -11,3 +11,117 @@ public class kd{
         System.out.print(name + "s age is" + age + "years ");
     }
 }
+/*
+how to print the custom linkedList (AddFirst)
+*/
+import java.util.ArrayList;
+
+public class LinkedList {
+    private Node head;
+    private Node tail;
+    private int size;
+    
+    public class Node {
+        int val;
+        Node next;
+
+        Node(int value) {
+            this.val = value;
+            this.next = null;
+        }
+    }
+    public void display() {
+        Node temp = this.head;
+
+        while(temp != null) {
+            System.out.print(temp.val+ " -> ");
+            temp = temp.next;
+        }
+
+        System.out.println("null");
+    }
+    public void addFirst(int data) {
+        //        Create the node and fill the data
+        Node newNode = new Node(data);
+//        attach to the Chain
+        if(this.size == 0) {
+            this.head = newNode;
+            this.tail = newNode;
+            this.size = 1;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+            this.size +=1;
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        LinkedList linkedList = new LinkedList();
+//          ----- add first ---------
+      linkedList.addFirst(1);
+    linkedList.addFirst(2);
+    
+        System.out.println("size: " + linkedList.size);
+         linkedList.display();
+    }
+}
+output :-
+size: 3
+2 -> 1 -> null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
