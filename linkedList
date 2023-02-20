@@ -244,10 +244,58 @@ size: 3
 
 
 
+/*
+how to print the custom linkedList (AddFirst)
+*/
 
+import java.util.LinkedList;
 
+public class LLpractice {
+    private  Node head;
+    private  Node tail;
+    private  int size;
+    public LLpractice(){
+        this.size= 0;
+    }
 
-
+    public void insertFirst(int val){
+    Node newNode = new Node(val);
+    newNode.next = head;
+    head = newNode;
+    size++;
+}
+  public  void display(){
+        Node iteam = head;
+        while(iteam != null){
+            System.out.print(iteam.val+" ");
+            iteam = iteam.next;
+        }
+        System.out.println();
+    }
+    private class Node{
+        private int val;
+        private Node next;
+       public  Node(int val){
+           this.val= val;
+        }
+        public  Node(int val, Node next){
+           this.val= val;
+           this.next=next;
+        }
+    }
+     public static void main(String[] args) {
+        LLpractice list = new LLpractice();
+        list.insertFirst(1);
+        list.insertFirst(2);
+        list.insertFirst(3);
+     //linkedList.insertLast(1, 62);
+        
+        list.display();
+     
+    }
+}
+output:
+3 2 1 
 
 
 
