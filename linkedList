@@ -147,9 +147,97 @@ size: 3
 
 
 
+/*
+how to print the custom linkedList (AddAt)
+*/
 
+import java.util.ArrayList;
 
+public class LinkedList {
+    private Node head;
+    private Node tail;
+    private int size;
 
+    public class Node {
+        int val;
+        Node next;
+        Node(int value) {
+            this.val = value;
+            this.next = null;
+        }
+    }
+   public void display() {
+        Node temp = this.head;
+
+        while(temp != null) {
+            System.out.print(temp.val+ " -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
+      public void addFirst(int data) {
+        //        Create the node and fill the data
+        Node newNode = new Node(data);
+//        attach to the Chain
+        if(this.size == 0) {
+            this.head = newNode;
+            this.tail = newNode;
+            this.size = 1;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+            this.size +=1;
+        }
+    }
+      public void addAt(int index, int data) throws Exception {
+        if(index == 0) {
+            this.addFirst(data);
+            return;
+        }
+        if(index == this.size) {
+            this.addFirst(data);
+            return;
+        }
+        if(index < 0 || index >= this.size ) {
+            throw new Exception("Index out of bound (m)" + "Index: "
+                    + index + " , Size: " + this.size);
+        }
+//        Create new node
+        Node newNode = new Node(data);
+//        Find previous Node of the index
+        Node previousNode = this.getNodeAt(index - 1);
+//        New node next will be the (next)* of the previousNode
+        Node nextOfPreviousNode = previousNode.next;
+        newNode.next = nextOfPreviousNode;
+//        Privious Node's Next should be newly created node
+        previousNode.next = newNode;
+        this.size += 1;
+    }
+     public Node getNodeAt(int index) throws Exception {
+        if(this.size == 0) {
+            throw new Exception("Size of LL is 0 right now");
+        }
+        if(index < 0 || index >= this.size) {
+            throw new Exception("Index out of bound" + "Index: "
+                    + index + " , Size: " + this.size);
+        }
+        Node temp = this.head;
+        while(index-- != 0) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+    public static void main(String[] args) throws Exception {
+        LinkedList linkedList = new LinkedList();
+        linkedList.addFirst(1);
+        linkedList.addFirst(2);
+        linkedList.addFirst(3);
+        linkedList.addAt(1, 62);
+        
+        System.out.println("size: " + linkedList.size);
+        linkedList.display();
+    }
+}
 
 
 
