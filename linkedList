@@ -72,12 +72,78 @@ size: 3
 
 
 
+/*
+how to print the custom linkedList (AddLast)
+*/
 
+import java.util.ArrayList;
+public class LinkedList {
+    private Node head;
+    private Node tail;
+    private int size;
 
+    public class Node {
+        int val;
+        Node next;
+        Node(int value) {
+            this.val = value;
+            this.next = null;
+        }
+    }
+    public void display() {
+        Node temp = this.head;
+        while(temp != null) {
+            System.out.print(temp.val+ " -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
+      public void addFirst(int data) {
+        //        Create the node and fill the data
+        Node newNode = new Node(data);
+//        attach to the Chain
+        if(this.size == 0) {
+            this.head = newNode;
+            this.tail = newNode;
+            this.size = 1;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+            this.size +=1;
+        }
+    }
+    public void addLast(int data) {
+//        Create the node and fill the data
+        Node newNode = new Node(data);
+//        attach to the Chain
+        if(this.size == 0) {
+            this.head = newNode;
+            this.tail = newNode;
+            this.size = 1;
+        } else {
+            // Attach node to chain
+            Node tailNode = this.tail;
+            tailNode.next = newNode;
+//            change the tail Pointer
+            this.tail = newNode;
 
+//          change the size
+            this.size += 1;
+        }
+    }
+    public static void main(String[] args) throws Exception {
+        LinkedList linkedList = new LinkedList();
+        
+        linkedList.addLast(1);
+        linkedList.addLast(2);
+        linkedList.addFirst(3);
 
-
-
+        System.out.println("size: " + linkedList.size);
+        linkedList.display();
+    }
+}
+size: 3
+3 -> 1 -> 2 -> null
 
 
 
