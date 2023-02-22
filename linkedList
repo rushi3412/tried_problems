@@ -11,6 +11,9 @@ public class kd{
         System.out.print(name + "s age is" + age + "years ");
     }
 }
+
+                                                      /* Creating LinkedList from Scrach */
+
 /*
 how to print the custom linkedList (AddFirst)
 */
