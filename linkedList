@@ -288,9 +288,9 @@ public class LLpractice {
     }
      public static void main(String[] args) {
         LLpractice list = new LLpractice();
-        list.insertFirst(1);
-        list.insertFirst(2);
         list.insertFirst(3);
+        list.insertFirst(2);
+        list.insertFirst(1);
      //linkedList.insertLast(1, 62);
         
         list.display();
@@ -298,7 +298,7 @@ public class LLpractice {
     }
 }
 output:
-3 2 1 
+1 2 3 
 
 
 
