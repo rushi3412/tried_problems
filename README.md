@@ -4580,3 +4580,61 @@ input :
 4 3 5 1                                 
 output :    
 1 3 4 5                                              
+
+                                 
+                                 
+                                 
+                                 
+                                 
+/*
+implement quick sort(did it in logical way)
+*/
+
+
+
+import java.util.*;
+public class dk{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        quickSort(arr, 0, arr.length - 1);
+        for(int i=0; i<n; i++){
+            System.out.print(arr[i]+ " ");
+        }
+    }
+    public static int partision(int[] arr, int low, int high){
+        int pivot = arr[high];
+        int i = low - 1;
+        for(int j=low; j<high; j++){
+            if(arr[j] < pivot){
+                i++;
+                int temp = arr[i];
+                 arr[i] = arr[j];
+                 arr[j] = temp;
+            }
+        }
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+        
+        return i + 1;
+    }
+    public static void quickSort(int[] arr,int low, int high){
+        if(low > high){
+            return;
+        }
+        int pi = partision(arr, low, high);
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+input :
+9
+1 5 6 90 3 8 2 70 64
+ouput :
+1 2 3 5 6 8 64 70 90                                  
