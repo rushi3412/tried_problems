@@ -137,3 +137,41 @@ Input:
 
 Output:
 3 2 
+
+
+
+
+/*
+Question: Median of an array
+        Input: [7 ,5, 1, 8, 3, 6, 0, 9, 4,2]
+        Output: 4.5
+        explanation: after sorting take numers which are in the middle...
+*/
+
+import java.util.*;
+public class dk{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+     double ans = meadia(arr);
+        System.out.print(ans);
+    }
+    public static double meadia(int[] arr){
+        Arrays.sort(arr);
+        if(arr.length % 2 == 0){
+            int mid = arr.length/2;
+            int mid1 = (arr.length/2) - 1;
+            
+            return (arr[mid1] + arr[mid]) / 2.0;
+        }else {
+            return arr[arr.length/2];
+        }
+        
+    }
+}
+Input: [7 ,5, 1, 8, 3, 6, 0, 9, 4,2]
+Output: 4.5
