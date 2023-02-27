@@ -104,7 +104,7 @@ output:
 
 
 /*
-Given a binary array of size N. Count number of 1's and 0's in the array.                                  
+Given a binary array of size N. Count number of 1's and 0's in the array.(interview que.)                                  
 */
 
 import java.util.*;
@@ -142,7 +142,7 @@ Output:
 
 
 /*
-Question: Median of an array
+Question: Median of an array(interview que.)
         Input: [7 ,5, 1, 8, 3, 6, 0, 9, 4,2]
         Output: 4.5
         explanation: after sorting take numers which are in the middle...
