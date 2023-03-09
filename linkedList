@@ -351,26 +351,51 @@ public class LLpractice { // class named LLpractice
 }
 
 
+/*
+how to print the custom linkedList (AddFirst)(redone but with more in-depth explaination of each line short version)
+*/
+import java.util.LinkedList;
+public class LLpractice { // class 
+    private  Node head;  // vaiable head of type Node with access modifier 
+    private  Node tail;  // same as above 
+    private  int size;  // same as above
+    public LLpractice(){  // contructor named llpractice
+        this.size= 0;     // this keyword to access the size field(variable) 
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public void insertFirst(int val) { // meathod called insertFirst with argument int val
+    Node newNode = new Node(val); // object named newNode nd constructor Node() with value val 
+    newNode.next = head;          // accessing next variable using object newNode
+    head = newNode;               // giving the head value the of newNode object 
+    size++;                       //increasing the size by 1 
+}
+  public  void display(){         // meathod called display 
+        Node iteam = head;        // vaiable item type Node --> value head 
+        while(iteam != null){     // simple while looop 
+            System.out.print(iteam.val+" ");  // print statment
+            iteam = iteam.next;              // here we are giving iteam variable value of iteam.next which is the next element from its position
+        }
+        System.out.println();                // print statement 
+    }
+    private class Node{                      // class Node 
+        private int val;                     // vaiable val type int with access modifier
+        private Node next;                  // asimilar as above
+       public  Node(int val){               // contructor named Node argue val type int
+           this.val= val;                   // this keyword to access the val field nd give value to it
+        }
+        public  Node(int val, Node next){   // constructor with argue val of type int, nd next of type Node
+    this.val= val;   // this keyword to access the val variable cause its not allowed declare two or more variables having the same name inside a class
+           this.next=next;                  // this keyword to access the next field same as above 
+        }
+    }
+     public static void main(String[] args) { // main function 
+        LLpractice list = new LLpractice();     // object called list nd created contructor called LLpractice
+        list.insertFirst(3);                    // our input
+        list.insertFirst(2);                    // our input
+        list.insertFirst(1);                    // our input
+     //linkedList.insertLast(1, 62);
+        
+        list.display();                         // here we are accessing display meathod using our object which we created
+     
+    }
+}
