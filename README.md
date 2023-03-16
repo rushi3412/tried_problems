@@ -31,7 +31,7 @@ arr[1] = line2Arrint;
 
 int ans = arr[0][0]*a[1][1] - arr[1][0]*arr[0][1];
 
-System.out.print(ans);
+System.out.print(ans); 
 
 
 
