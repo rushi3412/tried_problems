@@ -655,3 +655,129 @@ public class LL{
 }
 output:
 3-> 2-> 0-> 1-> END
+
+
+/*
+all linkedlist mathods
+*/
+public class LLpractice {
+    private  Node head;
+    private  Node tail;
+    private  int size;
+    public LLpractice(){
+        this.size= 0;
+    }
+    public  void insertLast(int val){
+        Node newNode = new Node(val);
+        if(head==null){
+            head = newNode;
+            return;
+        }
+        Node temp = head;
+        while(temp.next!=null)
+            temp = temp.next;
+        temp.next = newNode;
+        size++;
+    }
+//    public  void middleOfLInkedList(){
+//        Node fast= head, slow=head;
+//        while(slow!=null && fast.next!=null){
+//            slow= slow.next;
+//            fast = fast.next.next;
+//
+//        }
+//        System.out.println(slow.val);
+//    }
+    public void deleteMiddleNode(){
+        Node temp = head;
+        int count=0;
+        while(temp!=null){
+            count++;
+            temp = temp.next;
+        }
+        if(count==1 || count==2){
+            return;
+        }
+        temp= head;
+        int x=1;
+        count /=2;
+        while(x!=count){
+            temp = temp.next;
+            x++;
+        }
+        temp.next= temp.next.next;
+    }
+    public void insertFirst(int val){
+    Node newNode = new Node(val);
+    newNode.next = head;
+    head = newNode;
+    size++;
+    }
+    public Node reverseList(){
+        Node prev = null;
+        Node current = head;
+        Node next= null;
+        while(current !=null){
+            next = current.next;
+            current.next= prev;
+            prev = current;
+            current = next;
+        }
+        head= prev;
+        return head;
+    }
+public void deleteFirst(){
+        if(head==null){
+            return;
+        }else{
+            if(head!=tail){
+                head = head.next;
+            }else{
+                head=tail=null;
+            }
+        }
+}
+public  void deleteLast(){
+    if (head == null)
+        return;
+    if (head.next == null) {
+        return;
+    }
+    // Find the second last node
+    Node second_last = head;
+    while (second_last.next.next != null)
+        second_last = second_last.next;
+    // Change next of second last
+    second_last.next = null;
+}
+public Node removeDublicate(){
+        if(head==null || head.next==null) return head;
+        Node temp = head;
+        while(temp.next!=null){
+            if(temp.val==temp.next.val){
+                temp.next= temp.next.next;
+            }else{
+                temp = temp.next;
+            }
+        }
+return head;
+}
+    public  void display(){
+        Node iteam = head;
+        while(iteam !=null){
+            System.out.print(iteam.val+" ");
+            iteam = iteam.next;
+        }
+        System.out.println();
+    }
+    private class Node{
+        private int val;
+        private Node next;
+       public  Node(int val){
+           this.val= val;
+        }
+        public  Node(int val, Node next){
+           this.val= val;
+           this.next=next;
+        }
+    }
