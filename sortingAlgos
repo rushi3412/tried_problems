@@ -232,3 +232,34 @@ output:
 
                 ----------------------------------------------new practice-------------------------------------------------------------
                 
+import java.util.*;
+public class buble{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        for(int i=0; i<n; i++){
+            sortingwithbuble(arr);
+            System.out.print(arr[i]+ " ");
+        }
+    }
+    public static void sortingwithbuble(int[] arr){
+        for(int i=0; i<arr.length; i++){
+            for(int j=0; j<arr.length - i - 1; j++){
+                if(arr[j] > arr[j + 1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+}
+input :
+3
+2 4 3
+input :
+2 3 4
