@@ -396,3 +396,51 @@ input :
 2 4 3
 output: 
 2 3 4
+
+
+5)
+import java.util.*;
+public class quick{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        quickSor(arr, 0, arr.length - 1);
+        for(int i=0; i<n; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+    public static int quickSortAlgo(int[] arr, int low, int high){
+        int piv = arr[high];
+        int i = low - 1;
+        for(int j=low; j<high; j++){
+            if(arr[j] < piv){
+                i++;
+                int temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+            }
+        }
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+        
+        return i + 1;
+    }
+    public static void quickSor(int[] arr, int low, int high){
+        if(low > high){
+            return;
+        }
+        int pi = quickSortAlgo(arr, low, high);
+        quickSor(arr, low, pi - 1);
+        quickSor(arr, pi + 1, high);
+    }
+}
+input :
+3
+2 4 3
+output:
+2 3 4 
