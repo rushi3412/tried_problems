@@ -865,3 +865,51 @@ public class LL{
 }
 
                 --------------------------------------------------------Revision-------------------------------------------------------------------
+
+/* linkedlist addfirst*/
+1)
+import java.util.LinkedList;
+public class linkedList{
+    private Node head;
+    private Node tail;
+    private int size;
+    
+    public linkedList(){
+        this.size = 0;
+    }
+    
+    public class Node{
+        private Node next;
+        private int value;
+        
+        public Node(int value){
+            this.value = value;
+        }
+        public Node(int value, Node next){
+            this.value = value;
+            this.next = next;
+        }
+    }
+    public void display(){
+        Node item = head;
+        while(item != null){
+            System.out.print(item.value + " ");
+            item = item.next;
+        }
+        System.out.println();
+    }
+    public void addfirst(int value){
+        Node node = new Node(value);
+        node.next = head;
+        head = node;
+        size++;
+    }
+    public static void main(String args[]){
+        linkedList list = new linkedList();
+        list.addfirst(3);
+        list.addfirst(2);
+        list.addfirst(1);
+        
+        list.display();
+    }
+}
