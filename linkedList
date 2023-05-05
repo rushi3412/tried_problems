@@ -973,3 +973,62 @@ public class LL{
         list.display();
     }
 }
+
+3)
+import java.util.LinkedList;
+public class LL{
+    private Node head;
+    private Node tail;
+    private int size;
+    
+    public LL(){
+        this.size = 0;
+    }
+    public class Node{
+        private Node next;
+        private int value;
+        
+        public Node(int value){
+            this.value = value;
+        }
+        public Node(int value, Node next){
+            this.value = value;
+            this.next = next;
+        }
+    }
+    public void display(){
+        Node item = head;
+        while(item != null){
+            System.out.print(item.value + " ");
+            item = item.next;
+        }
+    }
+    public void addfirst(int value){
+        Node node = new Node(value);
+        node.next = head;
+        head = node;
+        size++;
+    }
+    public void addlast(int value){
+        Node node = new Node(value);
+        if(head == null){
+            head = null;
+            return;
+        }
+        Node temp = head;
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        temp.next = node;
+        size++;
+    }
+    public static void main(String args[]){
+        LL list = new LL();
+        list.addfirst(3);
+        list.addfirst(2);
+        list.addfirst(1);
+        list.addlast(4);
+        
+        list.display();
+    }
+}
