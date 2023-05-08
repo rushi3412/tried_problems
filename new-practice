@@ -191,3 +191,31 @@ public class dk{
         System.out.print(sum);
     }
 }
+
+9) 8) sum of all the integers inside it using Arraylist..(by creating a new function)
+import java.util.*;
+import java.util.ArrayList;
+public class dk{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i=0; i<n; i++){
+            list.add(in.nextInt());
+        }
+        int sum = sumOfAll(list);
+        System.out.print(sum);
+    }
+    public static int sumOfAll(ArrayList<Integer> list){
+        int sum = 0;
+        for(int i=0; i<list.size(); i++){
+            sum += list.get(i);
+        }
+            return sum;
+    }
+}
+input :
+5
+1 2 3 4 5
+output :
+15
