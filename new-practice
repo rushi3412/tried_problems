@@ -108,3 +108,26 @@ public class jd{
 }
 output:
 {jkdf=3, jdkf=4}
+
+
+5) arraylist user input
+import java.util.*;
+import java.util.ArrayList;
+public class kd{
+    public static void main(String args[]){
+        ArrayList<Integer> list = new ArrayList<>();
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        for(int i=0;i<n; i++){
+            list.add(in.nextInt());
+        }
+        for(int i=0; i<list.size(); i++){
+            System.out.print(list.get(i) + " ");
+        }
+    }
+}
+input :
+4
+1 2 3 4
+output:
+1 2 3 4 
