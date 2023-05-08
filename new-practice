@@ -131,3 +131,23 @@ input :
 1 2 3 4
 output:
 1 2 3 4 
+
+6) arraylist userinput 2nd meathod
+import java.util.*;
+import java.util.ArrayList;
+public class dk{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i=0; i<n; i++){
+            list.add(in.nextInt());
+        }
+        System.out.print(list);
+    }
+}
+input :
+4
+1 2 3 4 
+output :
+[1, 2, 3, 4]
