@@ -94,3 +94,17 @@ output
 1 2 3 4 
 5 6 7 8 
 9 1 2 4 
+
+4) hashmap print string 
+import java.util.HashMap;
+public class jd{
+    public static void main(String args[]){
+        HashMap<String , Integer> map = new HashMap<>();
+        
+        map.put("jdkf" , 4);
+        map.put("jkdf" , 3);
+         System.out.println(map);
+    }
+}
+output:
+{jkdf=3, jdkf=4}
