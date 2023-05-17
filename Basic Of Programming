@@ -20,3 +20,37 @@ Input 1 :
 1 2 3 4 5 6 7 8 9 0
 Output 1 :
 45
+
+
+/* In medieval times, a knight is chasing a thief who has stolen a precious gem from the royal treasury. The knight is riding his trusted horse at a speed of Y meters per second, while the thief is running on foot at a speed of X meters per second. The chase begins in an open field where the knight can gallop at full speed. Determine whether the knight will be able to catch the thief.
+Note: Knight and Thief were not at the same position initially.
+*/
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+    public static void main (String[] args) {
+        // Your code here
+        Scanner in = new Scanner(System.in);
+        int T = in.nextInt();
+        while(T-- > 0){
+            int X = in.nextInt();
+            int Y = in.nextInt();
+
+            if(X < Y){
+                System.out.println("Yes");
+            }else {
+                System.out.println("No");
+            }
+        }
+    }
+}
+Input
+2
+1 2
+4 1
+Output
+Yes
+No
