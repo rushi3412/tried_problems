@@ -153,3 +153,26 @@ input :
 5
 5 6 7 8 9
 output: 8
+
+
+
+//write function to find second highest number from a array of numbers (userinput,short meathod)
+
+import java.util.*;
+public class secondHi{
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        
+        for(int i=0;i<n; i++){
+            arr[i] = in.nextInt();
+        }
+        int ans = secondHighestN(arr);
+        System.out.println(ans);
+    }
+    public static int secondHighestN(int[] arr){
+        Arrays.sort(arr);
+        return arr[arr.length - 2];
+    }
+}
