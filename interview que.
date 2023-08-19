@@ -90,3 +90,27 @@ input :
 output :
 {1=4, 2=3, 3=1, 5=2, 6=1}
  
+//write function to find second highest number from a array of numbers 
+import java.util.*;
+public class highNu{
+    public static void main(String args[]){
+        int[] num = {5, 3, 6 ,1,7};
+        int ans = secondHighest(num);
+        System.out.println(ans);
+    }
+    public static int secondHighest(int[] arr){
+        int highest = Integer.MIN_VALUE;
+        int secondHigh = Integer.MIN_VALUE;
+        
+        for(int n : arr){
+            if(n > highest){
+                secondHigh = highest;
+                highest = n;
+            }else if(n > secondHigh && n < highest){
+                secondHigh = n;
+            }
+        }
+        return secondHigh;
+    }
+}
+O/P:- 6
