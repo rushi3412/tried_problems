@@ -1,7 +1,7 @@
 **Definition of Time Complexity:**
-Time complexity measures the amount of time an algorithm takes to complete in relation to the size of its input.
-It's a way to analyze and compare the efficiency of different algorithms. Time complexity is typically expressed 
-using Big O notation, which provides an upper bound on the growth rate of an algorithm's runtime relative to the input size.
+Time complexity is expressed using Big O notation, which provides an upper bound on how the runtime of the algorithm 
+scales as the input size grows. It helps in comparing and choosing algorithms that efficiently solve problems, especially 
+for larger datasets. It quantifies the relationship between the size of the input data and the number of basic operations the algorithm performs. 
 
 **Measuring Time Complexity:**
 To measure time complexity, follow these steps:
