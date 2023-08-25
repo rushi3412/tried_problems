@@ -1,0 +1,99 @@
+**Definition of Time Complexity:**
+Time complexity measures the amount of time an algorithm takes to complete in relation to the size of its input.
+It's a way to analyze and compare the efficiency of different algorithms. Time complexity is typically expressed 
+using Big O notation, which provides an upper bound on the growth rate of an algorithm's runtime relative to the input size.
+
+**Measuring Time Complexity:**
+To measure time complexity, follow these steps:
+
+1. **Select a Relevant Metric:** Focus on the operation that dominates the algorithm's runtime,
+often found within loops or recursive calls.
+
+2. **Count Operations:** Analyze the algorithm and count how many times the relevant operation 
+is executed based on the input size.
+
+3. **Express in Big O Notation:** Convert the counted operations into a mathematical expression, 
+ignoring constant factors and lower-order terms. The goal is to capture the growth rate.
+
+4. **Simplify:** Use common Big O notations (e.g., O(1), O(log n), O(n), O(n log n), O(n^2), etc.) 
+to simplify the expression.
+
+**Key Concepts for Interviews:**
+
+1. **Worst-Case Analysis:** Focus on the worst-case time complexity as it provides an upper bound on 
+the algorithm's runtime for any input size. Interviewers are usually interested in understanding the worst-case performance of your algorithms.
+
+2. **Dominant Factors:** Identify the most significant factor that contributes to the time complexity. 
+Often, this factor is related to loops or recursive calls.
+
+3. **Nested Loops:** Be prepared to analyze the time complexity of nested loops. For each level of nesting, multiply the loop's iterations.
+
+4. **Recursive Algorithms:** Analyze recursive algorithms carefully. Consider how many times the recursion 
+branches and how the problem size decreases with each recursive call.
+
+5. **Common Time Complexities:** Understand the characteristics of common time complexities like O(1), O(log n), 
+O(n), O(n log n), and O(n^2). Be able to identify them in code and explain their growth rates.
+
+6. **Trade-offs:** Be ready to discuss trade-offs between time complexity and other factors, such as memory usage.
+
+7. **Optimization Strategies:** Demonstrate your ability to optimize algorithms for better time complexity, if applicable.
+
+**Practice:**
+1. **Analyze Algorithms:** Practice analyzing the time complexity of different algorithms. Start with simple examples 
+and gradually move to more complex ones.
+
+2. **Implement Algorithms:** Implement algorithms with different time complexities and discuss their analysis. 
+This will solidify your understanding.
+
+3. **Solve Problems:** Solve coding problems on platforms like LeetCode, HackerRank, or Codeforces. Read others'
+solutions to learn different approaches.
+
+4. **Whiteboard Practice:** Simulate interview conditions by solving problems on a whiteboard or on paper. 
+Explain your thought process and time complexity analysis out loud.
+
+5. **Review Data Structures:** Understand how time complexity can vary based on the data structures used 
+(e.g., arrays, linked lists, trees).
+
+interviewers often focus on your ability to reason through time complexity and analyze algorithms efficiently. 
+Practice, practice, and practice some more to build confidence in this area.
+
+Consider a simple problem: 
+finding the maximum element in an array of integers. Here's the algorithm in Java:
+
+```java
+public int findMax(int[] array) {
+    int max = Integer.MIN_VALUE;
+    for (int num : array) {
+        if (num > max) {
+            max = num;
+        }
+    }
+    return max;
+}
+```
+
+Now, let's break down how to find the time complexity (TC) of this algorithm:
+
+**Step 1: Relevant Metric**
+The relevant metric here is the comparison inside the loop (`if (num > max)`).
+
+**Step 2: Count Operations**
+The number of comparisons made depends on the size of the array (`n`). Each element in the array is compared to the current maximum.
+
+**Step 3: Express in Big O Notation**
+The number of comparisons is directly proportional to the size of the array. Therefore, the time complexity 
+is O(n), where `n` is the size of the input array.
+
+**Step 4: Simplify**
+The expression `O(n)` is already in the simplest form. We don't need to simplify it further.
+
+So, the time complexity of the `findMax` algorithm is O(n), where `n` is the number of elements in the input array.
+
+Here's a breakdown of why we arrived at O(n):
+
+- As the size of the array increases, the number of comparisons increases linearly.
+- If the array has twice as many elements, the algorithm will perform roughly twice as many comparisons.
+- The growth rate is directly proportional to the size of the input.
+
+Remember, when determining time complexity, focus on the part of the algorithm that contributes most to the runtime. 
+In this case, it's the loop that goes through the entire array and performs comparisons. This example demonstrates a linear time complexity.
