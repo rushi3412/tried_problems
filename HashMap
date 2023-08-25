@@ -202,3 +202,11 @@ public class FirstNonRepeatingChar {
     }
 }
 Output: p
+why '\0' nd not '0'
+1) '\0': This is the null character in Java, which is represented as a character with the Unicode value 0. 
+It's often used to indicate the end of a string in C-style strings. In this code, char firstNonRepeatingChar = '\0'; 
+initializes firstNonRepeatingChar to a default value of null.
+
+2) 0: This is the integer value zero. While you could technically use 0 to initialize firstNonRepeatingChar,
+it's better to use '\0' because it's a more appropriate representation of a character that hasn't been found yet.
+It aligns better with the context of characters and strings.
