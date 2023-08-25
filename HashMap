@@ -1,0 +1,79 @@
+Defination:-
+ A HashMap is a fundamental data structure in Java that provides an efficient way to store and retrieve key-value pairs.
+  HashMap is a part of the Java Collections Framework and implements the Map interface. HashMaps are known for their fast and constant-time 
+  average performance for basic operations like insertion, deletion, and retrieval.
+
+**Key Points:**
+1. **Keys are Unique:** HashMap keys are unique, meaning that you cannot have duplicate keys in a single HashMap.
+
+2. **Null Values and Keys:** A HashMap can have one null key and multiple null values.
+
+3. **Performance:**
+   - Basic operations (insertion, deletion, retrieval) have an average time complexity of O(1) in ideal cases.
+   - However, in worst cases or under certain hash collisions, the time complexity can degrade to O(n),
+      but this is rare and can be minimized using proper techniques.
+
+4. **Hashing:**
+   - HashMaps use hash codes to determine the index where elements are stored internally.
+   - The `hashCode()` method of the key is used to compute the hash code.
+   - Collisions occur when two different keys produce the same hash code. HashMaps use chaining or other collision 
+      resolution strategies to manage this.
+
+5. **Load Factor and Rehashing:**
+   - The load factor determines how full the HashMap can be before it's resized.
+   - When the load factor is exceeded, the HashMap is automatically resized and rehashed to maintain performance.
+
+**Common Methods:**
+- `put(key, value)`: Inserts a key-value pair into the HashMap.
+- `get(key)`: Retrieves the value associated with the given key.
+- `remove(key)`: Removes the key-value pair for the given key.
+- `containsKey(key)`: Checks if the HashMap contains a specific key.
+- `keySet()`: Returns a Set of all keys in the HashMap.
+
+
+Here's a simple example demonstrating the usage of each method in a HashMap:
+
+```java
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        // Create a HashMap to store names and their corresponding ages
+        HashMap<String, Integer> ageMap = new HashMap<>();
+
+        // Adding key-value pairs using put() method
+        ageMap.put("Alice", 25);
+        ageMap.put("Bob", 30);
+        ageMap.put("Charlie", 28);
+
+        // Retrieving values using get() method
+        System.out.println("Age of Alice: " + ageMap.get("Alice"));  // Output: Age of Alice: 25
+
+        // Checking if a key exists using containsKey() method
+        if (ageMap.containsKey("Bob")) {
+            System.out.println("Bob's age is present.");
+        } else {
+            System.out.println("Bob's age is not present.");
+        }
+
+        // Removing a key-value pair using remove() method
+        ageMap.remove("Charlie");
+
+        // Iterating through keys using keySet() method
+        System.out.println("Names in the HashMap:");
+        for (String name : ageMap.keySet()) {
+            System.out.println(name);
+        }
+    }
+}
+```
+
+In this example:
+- We create a HashMap named `ageMap` to store names (keys) and ages (values).
+- We use the `put()` method to add key-value pairs.
+- The `get()` method retrieves the age of Alice.
+- The `containsKey()` method checks if Bob's age is present.
+- The `remove()` method removes Charlie's key-value pair.
+- The `keySet()` method is used to iterate through the keys and print them.
+
+This basic example covers the usage of fundamental methods in a HashMap.
