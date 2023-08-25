@@ -77,3 +77,39 @@ In this example:
 - The `keySet()` method is used to iterate through the keys and print them.
 
 This basic example covers the usage of fundamental methods in a HashMap.
+===================================================================================================================================================
+Problems
+
+1st Problem: Counting Frequency of Elements
+Given an array of integers, write a program to count the frequency of each element and display the results.
+
+Example:
+Input: [1, 2, 3, 2, 4, 1, 3, 5, 2]
+
+import java.util.HashMap;
+
+public class FrequencyCounter {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 2, 4, 1, 3, 5, 2};
+        HashMap<Integer, Integer> frequencyMap = new HashMap<>();
+
+        // Step 1: Iterate through the input array
+        for (int num : array) {
+            // Step 2: Check if the element is already in the HashMap
+            // Step 3: If it's in the HashMap, increment the frequency; if not, add it with frequency 1
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+
+        // Step 4: Iterate through the HashMap and print the frequency of each element
+        for (int key : frequencyMap.keySet()) {
+            System.out.println("Element " + key + " occurs " + frequencyMap.get(key) + " times");
+        }
+    }
+}
+ouput:
+1=2
+2=3
+3=2
+4=2
+5=1
+13=1
