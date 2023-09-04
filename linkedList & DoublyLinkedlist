@@ -553,3 +553,115 @@ public class DLLpractice {
         list.displayBackward();
     }
 }
+
+
+--------------------------------------------------------Problems(SinglyLinkedlist)-------------------------------------------------------------------
+Leetcode que.
+141. Linked List Cycle
+Easy
+
+Given head, the head of a linked list, determine if the linked list has a cycle in it.
+There is a cycle in a linked list if there is some node in the list that can be reached again by continuously 
+following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer 
+is connected to. Note that pos is not passed as a parameter.
+Return true if there is a cycle in the linked list. Otherwise, return false.
+
+ 
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if(fast == slow){
+                return true;
+            }
+        }
+        return false;
+    }
+}
+Input
+[3,2,0,-4]
+1
+Output
+true
+
+Userinput: ans 
+
+import java.util.Scanner;
+
+public class Solution {
+
+  public static boolean hasCycle(ListNode head) {
+    ListNode slow = head;
+    ListNode fast = head;
+
+    while (fast != null && fast.next != null) {
+      slow = slow.next;
+      fast = fast.next.next;
+
+      if (slow == fast) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    int n = scanner.nextInt();
+    int[] arr = new int[n];
+    for (int i = 0; i < n; i++) {
+      arr[i] = scanner.nextInt();
+    }
+
+    ListNode head = new ListNode(arr[0]);
+    ListNode curr = head;
+    for (int i = 1; i < n; i++) {
+      curr.next = new ListNode(arr[i]);
+      curr = curr.next;
+    }
+
+    int pos = scanner.nextInt();
+
+    if (pos >= 0 && pos < n) {
+      curr.next = head;
+    }
+
+    boolean hasCycle = hasCycle(head);
+    System.out.println(hasCycle);
+  }
+
+}
+
+class ListNode {
+
+  int val;
+  ListNode next;
+
+  ListNode(int val) {
+    this.val = val;
+    this.next = null;
+  }
+}
+Input
+[3,2,0,-4]
+1
+Output
+true
